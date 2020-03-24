@@ -1,0 +1,11 @@
+D:\Studying\Thực hành\CNPM\Đồ án\QuanLyNhaXe\bin\Debug\QuanLyNhaXe.exe.config
+D:\Studying\Thực hành\CNPM\Đồ án\QuanLyNhaXe\bin\Debug\QuanLyNhaXe.exe
+D:\Studying\Thực hành\CNPM\Đồ án\QuanLyNhaXe\bin\Debug\QuanLyNhaXe.pdb
+D:\Studying\Thực hành\CNPM\Đồ án\QuanLyNhaXe\obj\Debug\QuanLyNhaXe.csprojAssemblyReference.cache
+D:\Studying\Thực hành\CNPM\Đồ án\QuanLyNhaXe\obj\Debug\QuanLyNhaXe.fLogin.resources
+D:\Studying\Thực hành\CNPM\Đồ án\QuanLyNhaXe\obj\Debug\QuanLyNhaXe.Properties.Resources.resources
+D:\Studying\Thực hành\CNPM\Đồ án\QuanLyNhaXe\obj\Debug\QuanLyNhaXe.csproj.GenerateResource.cache
+D:\Studying\Thực hành\CNPM\Đồ án\QuanLyNhaXe\obj\Debug\QuanLyNhaXe.csproj.CoreCompileInputs.cache
+D:\Studying\Thực hành\CNPM\Đồ án\QuanLyNhaXe\obj\Debug\QuanLyNhaXe.exe
+D:\Studying\Thực hành\CNPM\Đồ án\QuanLyNhaXe\obj\Debug\QuanLyNhaXe.pdb
+D:\Studying\Thực hành\CNPM\Đồ án\QuanLyNhaXe\obj\Debug\QuanLyNhaXe.fSeatManager.resources
