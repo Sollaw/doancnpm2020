@@ -32,7 +32,7 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.tbxPassWord = new System.Windows.Forms.TextBox();
+            this.txbPassWord = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txbUserName = new System.Windows.Forms.TextBox();
@@ -55,6 +55,7 @@
             // 
             // btnExit
             // 
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.Location = new System.Drawing.Point(246, 103);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
@@ -75,20 +76,21 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.tbxPassWord);
+            this.panel3.Controls.Add(this.txbPassWord);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(3, 53);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(321, 44);
             this.panel3.TabIndex = 4;
             // 
-            // tbxPassWord
+            // txbPassWord
             // 
-            this.tbxPassWord.Location = new System.Drawing.Point(7, 21);
-            this.tbxPassWord.Name = "tbxPassWord";
-            this.tbxPassWord.Size = new System.Drawing.Size(311, 20);
-            this.tbxPassWord.TabIndex = 2;
-            this.tbxPassWord.UseSystemPasswordChar = true;
+            this.txbPassWord.Location = new System.Drawing.Point(7, 21);
+            this.txbPassWord.Name = "txbPassWord";
+            this.txbPassWord.Size = new System.Drawing.Size(311, 20);
+            this.txbPassWord.TabIndex = 2;
+            this.txbPassWord.Text = "123456";
+            this.txbPassWord.UseSystemPasswordChar = true;
             // 
             // label2
             // 
@@ -115,6 +117,7 @@
             this.txbUserName.Name = "txbUserName";
             this.txbUserName.Size = new System.Drawing.Size(311, 20);
             this.txbUserName.TabIndex = 1;
+            this.txbUserName.Text = "DoanDucVu";
             // 
             // label1
             // 
@@ -128,8 +131,10 @@
             // 
             // fLogin
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(351, 156);
             this.Controls.Add(this.panel1);
             this.Name = "fLogin";
@@ -153,7 +158,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tbxPassWord;
+        private System.Windows.Forms.TextBox txbPassWord;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnLogin;
     }

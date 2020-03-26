@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyNhaXe.DAO;
+using System;
 using System.Windows.Forms;
 
 namespace QuanLyNhaXe
@@ -12,10 +13,25 @@ namespace QuanLyNhaXe
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            fSeatManager f = new fSeatManager();
-            f.ShowDialog();
-            this.Show();
+            string userName = txbUserName.Text;
+            string passWord = txbPassWord.Text;
+
+            if (Login(userName, passWord))
+            {
+                this.Hide();
+                fCarManager f = new fCarManager();
+                f.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Sai tên tài khoản hoặc mặt khẩu !!!");
+            }
+        }
+
+        bool Login(string userName, string passWord)
+        {
+            return AccountDAO.Instance.Login(userName, passWord);
         }
 
         private void btnExit_Click(object sender, EventArgs e)

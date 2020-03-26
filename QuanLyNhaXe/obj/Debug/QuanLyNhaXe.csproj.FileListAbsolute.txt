@@ -8,4 +8,6 @@ D:\Studying\Thực hành\CNPM\Đồ án\QuanLyNhaXe\obj\Debug\QuanLyNhaXe.csproj
 D:\Studying\Thực hành\CNPM\Đồ án\QuanLyNhaXe\obj\Debug\QuanLyNhaXe.csproj.CoreCompileInputs.cache
 D:\Studying\Thực hành\CNPM\Đồ án\QuanLyNhaXe\obj\Debug\QuanLyNhaXe.exe
 D:\Studying\Thực hành\CNPM\Đồ án\QuanLyNhaXe\obj\Debug\QuanLyNhaXe.pdb
-D:\Studying\Thực hành\CNPM\Đồ án\QuanLyNhaXe\obj\Debug\QuanLyNhaXe.fSeatManager.resources
+D:\Studying\Thực hành\CNPM\Đồ án\QuanLyNhaXe\obj\Debug\QuanLyNhaXe.fAccountProfile.resources
+D:\Studying\Thực hành\CNPM\Đồ án\QuanLyNhaXe\obj\Debug\QuanLyNhaXe.fAdmin.resources
+D:\Studying\Thực hành\CNPM\Đồ án\QuanLyNhaXe\obj\Debug\QuanLyNhaXe.fCarManager.resources
