@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="16.9" version="16.9" Modules="simple" RootPath="." Language="en" Id="{40E04F25-A91D-4AD2-B5AA-94FED786862C}">
+  <COMPONENT cid="caphyon.advinst.msicomp.ProjectOptionsComponent">
+    <ROW Name="HiddenItems" Value="AppXProductDetailsComponent;AppXDependenciesComponent;AppXAppDetailsComponent;AppXVisualAssetsComponent;AppXCapabilitiesComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent;FixupComponent;MsiXDiffComponent"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="AI_PREDEF_LCONDS_PROPS" Value="AI_DETECTED_DOTNET_VERSION;AI_DETECTED_SQLEXPRESS_VERSION"/>
+    <ROW Property="AI_REQUIRED_DOTNET_DISPLAY" MultiBuildValue="DefaultBuild:4.6" ValueLocId="-"/>
+    <ROW Property="AI_REQUIRED_DOTNET_VERSION" MultiBuildValue="DefaultBuild:4.6" ValueLocId="-"/>
+    <ROW Property="AI_REQUIRED_SQLEXPRESS_DISPLAY" MultiBuildValue="DefaultBuild:SQL Server Express 2019" ValueLocId="-"/>
+    <ROW Property="AI_REQUIRED_SQLEXPRESS_VERSION" MultiBuildValue="DefaultBuild:2019" ValueLocId="-"/>
+    <ROW Property="AI_RUN_AS_ADMIN" Value="0"/>
+    <ROW Property="ALLUSERS" Value="1"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="Manufacturer" Value="DoAn2020"/>
+    <ROW Property="ProductCode" Value="1033:{8DEC6A69-3EF7-4C76-A60D-E4F795A27C06} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="Car Station Management"/>
+    <ROW Property="ProductVersion" Value="1.0.0" Type="32"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
+    <ROW Property="UpgradeCode" Value="{61866248-7972-46A6-A5DC-27E88BA47B59}"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40Display" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50Display" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5X" MultiBuildValue="DefaultBuild:Windows XP/2003" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5XDisplay" MultiBuildValue="DefaultBuild:Windows XP/2003" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="Data_Dir" Directory_Parent="APPDIR" DefaultDir="Data"/>
+    <ROW Directory="Debug_Dir" Directory_Parent="APPDIR" DefaultDir="Debug"/>
+    <ROW Directory="SqlServerTypes_Dir" Directory_Parent="Debug_Dir" DefaultDir="SQLSER~1|SqlServerTypes"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="de_Dir" Directory_Parent="Debug_Dir" DefaultDir="de"/>
+    <ROW Directory="es_Dir" Directory_Parent="Debug_Dir" DefaultDir="es"/>
+    <ROW Directory="fr_Dir" Directory_Parent="Debug_Dir" DefaultDir="fr"/>
+    <ROW Directory="it_Dir" Directory_Parent="Debug_Dir" DefaultDir="it"/>
+    <ROW Directory="ja_Dir" Directory_Parent="Debug_Dir" DefaultDir="ja"/>
+    <ROW Directory="ko_Dir" Directory_Parent="Debug_Dir" DefaultDir="ko"/>
+    <ROW Directory="pt_Dir" Directory_Parent="Debug_Dir" DefaultDir="pt"/>
+    <ROW Directory="ru_Dir" Directory_Parent="Debug_Dir" DefaultDir="ru"/>
+    <ROW Directory="x64_Dir" Directory_Parent="SqlServerTypes_Dir" DefaultDir="x64"/>
+    <ROW Directory="x86_Dir" Directory_Parent="SqlServerTypes_Dir" DefaultDir="x86"/>
+    <ROW Directory="zhCHS_Dir" Directory_Parent="Debug_Dir" DefaultDir="zh-CHS"/>
+    <ROW Directory="zhCHT_Dir" Directory_Parent="Debug_Dir" DefaultDir="zh-CHT"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="APPDIR" ComponentId="{D19AA97F-EA47-4211-B783-63846D13CD21}" Directory_="APPDIR" Attributes="0"/>
+    <ROW Component="AxShockwaveFlashObjects.dll" ComponentId="{6C965CEE-0F85-4DE6-B58C-039BF491D003}" Directory_="Debug_Dir" Attributes="0" KeyPath="AxShockwaveFlashObjects.dll"/>
+    <ROW Component="Createdatabase.bat" ComponentId="{221C14C9-F289-44A5-A6FF-75549B5D31C0}" Directory_="Data_Dir" Attributes="0" KeyPath="Createdatabase.bat" Type="0"/>
+    <ROW Component="CrystalDecisions.CrystalReports.Engine.dll" ComponentId="{1D9CEF8D-BBB4-430A-A28A-83E2DF45B1A3}" Directory_="Debug_Dir" Attributes="0" KeyPath="CrystalDecisions.CrystalReports.Engine.dll"/>
+    <ROW Component="CrystalDecisions.ReportAppServer.ClientDoc.dll" ComponentId="{5656F449-0B68-4187-859A-01AD73E2D9C5}" Directory_="Debug_Dir" Attributes="0" KeyPath="CrystalDecisions.ReportAppServer.ClientDoc.dll"/>
+    <ROW Component="CrystalDecisions.ReportAppServer.CommLayer.dll" ComponentId="{9FB8D45F-6BF7-4400-9D5F-271DD4611627}" Directory_="Debug_Dir" Attributes="0" KeyPath="CrystalDecisions.ReportAppServer.CommLayer.dll"/>
+    <ROW Component="CrystalDecisions.ReportAppServer.CommonControls.dll" ComponentId="{ECC1ED7B-57F5-447C-A49D-7576519137AA}" Directory_="Debug_Dir" Attributes="0" KeyPath="CrystalDecisions.ReportAppServer.CommonControls.dll"/>
+    <ROW Component="CrystalDecisions.ReportAppServer.CommonObjectModel.dll" ComponentId="{55F65857-19A4-4718-9F96-C32913B864FE}" Directory_="Debug_Dir" Attributes="0" KeyPath="CrystalDecisions.ReportAppServer.CommonObjectModel.dll"/>
+    <ROW Component="CrystalDecisions.ReportAppServer.Controllers.dll" ComponentId="{E939DD48-CDC3-4945-B7F0-DEAEFF9C1DA9}" Directory_="Debug_Dir" Attributes="0" KeyPath="CrystalDecisions.ReportAppServer.Controllers.dll"/>
+    <ROW Component="CrystalDecisions.ReportAppServer.CubeDefModel.dll" ComponentId="{54712482-194D-411D-BA5D-FC6F7661A38A}" Directory_="Debug_Dir" Attributes="0" KeyPath="CrystalDecisions.ReportAppServer.CubeDefModel.dll"/>
+    <ROW Component="CrystalDecisions.ReportAppServer.DataDefModel.dll" ComponentId="{05FA8F86-787E-4AE7-910E-179A2D16C4E1}" Directory_="Debug_Dir" Attributes="0" KeyPath="CrystalDecisions.ReportAppServer.DataDefModel.dll"/>
+    <ROW Component="CrystalDecisions.ReportAppServer.DataSetConversion.dll" ComponentId="{58DFC6FB-AF23-4294-ABA6-EEA5CBA0DDB8}" Directory_="Debug_Dir" Attributes="0" KeyPath="CrystalDecisions.ReportAppServer.DataSetConversion.dll"/>
+    <ROW Component="CrystalDecisions.ReportAppServer.ObjectFactory.dll" ComponentId="{C532BF93-D934-407C-82B0-4C96FFAF2C4F}" Directory_="Debug_Dir" Attributes="0" KeyPath="CrystalDecisions.ReportAppServer.ObjectFactory.dll"/>
+    <ROW Component="CrystalDecisions.ReportAppServer.Prompting.dll" ComponentId="{A1155E78-7CFB-4CB5-BB69-48750ACE72B3}" Directory_="Debug_Dir" Attributes="0" KeyPath="CrystalDecisions.ReportAppServer.Prompting.dll"/>
+    <ROW Component="CrystalDecisions.ReportAppServer.ReportDefModel.dll" ComponentId="{CB382A5A-8915-4D48-954A-8A45B7504E7A}" Directory_="Debug_Dir" Attributes="0" KeyPath="CrystalDecisions.ReportAppServer.ReportDefModel.dll"/>
+    <ROW Component="CrystalDecisions.ReportAppServer.XmlSerialize.dll" ComponentId="{75FC5CC2-7409-4669-A60D-1529BE59734F}" Directory_="Debug_Dir" Attributes="0" KeyPath="CrystalDecisions.ReportAppServer.XmlSerialize.dll"/>
+    <ROW Component="CrystalDecisions.ReportSource.dll" ComponentId="{DF7483F9-86F6-4A52-AEC7-90B16C2C0B6C}" Directory_="Debug_Dir" Attributes="0" KeyPath="CrystalDecisions.ReportSource.dll"/>
+    <ROW Component="CrystalDecisions.Shared.dll" ComponentId="{D124B68B-A4BD-4880-8CCA-7282629BD1DE}" Directory_="Debug_Dir" Attributes="0" KeyPath="CrystalDecisions.Shared.dll"/>
+    <ROW Component="CrystalDecisions.Windows.Forms.dll" ComponentId="{11BF16CA-2690-4ACA-8BDE-D03671704C53}" Directory_="Debug_Dir" Attributes="0" KeyPath="CrystalDecisions.Windows.Forms.dll"/>
+    <ROW Component="EnvDTE.dll" ComponentId="{C2AB7DE5-255B-4BFF-AB58-4E70D49CD57C}" Directory_="Debug_Dir" Attributes="0" KeyPath="EnvDTE.dll"/>
+    <ROW Component="EnvDTE80.dll" ComponentId="{BB7CD132-4B7B-444D-AD43-052BE3F794A5}" Directory_="Debug_Dir" Attributes="0" KeyPath="EnvDTE80.dll"/>
+    <ROW Component="Microsoft.Build.Framework.dll" ComponentId="{EED1EBC3-B568-4BA0-B4E1-E77EAD370ACE}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.Build.Framework.dll"/>
+    <ROW Component="Microsoft.Build.Tasks.Core.dll" ComponentId="{7E254B9A-479F-48A0-AEF4-4CCFC3531790}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.Build.Tasks.Core.dll"/>
+    <ROW Component="Microsoft.Build.Utilities.Core.dll" ComponentId="{F3D3E071-4115-45C6-A38C-C97519C76A38}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.Build.Utilities.Core.dll"/>
+    <ROW Component="Microsoft.MSXML.dll" ComponentId="{738382DF-4B93-45FA-9A90-8F6E45030BF6}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.MSXML.dll"/>
+    <ROW Component="Microsoft.ReportViewer.Common.dll" ComponentId="{6BE1654D-0E0F-49BC-82F9-D190ADD15695}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Common.dll"/>
+    <ROW Component="Microsoft.ReportViewer.Common.resources.dll" ComponentId="{74BAB54C-45EF-4C34-81C7-1E5CB1603C60}" Directory_="de_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Common.resources.dll"/>
+    <ROW Component="Microsoft.ReportViewer.Common.resources.dll_1" ComponentId="{CE2308AC-B629-41B6-85BB-32A2A8199483}" Directory_="es_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Common.resources.dll_1"/>
+    <ROW Component="Microsoft.ReportViewer.Common.resources.dll_2" ComponentId="{F81D287A-698A-4D0A-9E2D-02F07B8D4C12}" Directory_="fr_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Common.resources.dll_2"/>
+    <ROW Component="Microsoft.ReportViewer.Common.resources.dll_3" ComponentId="{ED95C853-479B-4191-8510-A2B7D406F586}" Directory_="it_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Common.resources.dll_3"/>
+    <ROW Component="Microsoft.ReportViewer.Common.resources.dll_4" ComponentId="{4C2B06CA-2E35-466F-A2CB-C92AB7ABFB7A}" Directory_="ja_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Common.resources.dll_4"/>
+    <ROW Component="Microsoft.ReportViewer.Common.resources.dll_5" ComponentId="{812568B8-3513-4FA6-92CE-BE86D0F06E48}" Directory_="ko_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Common.resources.dll_5"/>
+    <ROW Component="Microsoft.ReportViewer.Common.resources.dll_6" ComponentId="{C96DBB4F-C9D8-473D-A31E-C29BDFD0416B}" Directory_="pt_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Common.resources.dll_6"/>
+    <ROW Component="Microsoft.ReportViewer.Common.resources.dll_7" ComponentId="{0A35878B-196C-42AF-80C3-4472B2D81FEA}" Directory_="ru_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Common.resources.dll_7"/>
+    <ROW Component="Microsoft.ReportViewer.Common.resources.dll_8" ComponentId="{EB369E3F-291B-4699-9F85-FC6CD4D31C86}" Directory_="zhCHS_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Common.resources.dll_8"/>
+    <ROW Component="Microsoft.ReportViewer.Common.resources.dll_9" ComponentId="{AF5E9458-14AA-4430-98D3-A6FADDEE8AD0}" Directory_="zhCHT_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Common.resources.dll_9"/>
+    <ROW Component="Microsoft.ReportViewer.DataVisualization.dll" ComponentId="{E0CEC455-CCE5-486A-AB12-CC4E3FA64D8E}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.DataVisualization.dll"/>
+    <ROW Component="Microsoft.ReportViewer.DataVisualization.resources.dll" ComponentId="{BC6B0089-46AE-4871-A483-810444B5FFA7}" Directory_="de_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.DataVisualization.resources.dll"/>
+    <ROW Component="Microsoft.ReportViewer.DataVisualization.resources.dll_1" ComponentId="{03073E6E-35F1-4015-9C5B-D83529E90F70}" Directory_="es_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.DataVisualization.resources.dll_1"/>
+    <ROW Component="Microsoft.ReportViewer.DataVisualization.resources.dll_2" ComponentId="{FCFF6BAB-1504-49CF-B30E-8D734809898E}" Directory_="fr_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.DataVisualization.resources.dll_2"/>
+    <ROW Component="Microsoft.ReportViewer.DataVisualization.resources.dll_3" ComponentId="{76927C18-955E-4203-B857-91CF4777DF34}" Directory_="it_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.DataVisualization.resources.dll_3"/>
+    <ROW Component="Microsoft.ReportViewer.DataVisualization.resources.dll_4" ComponentId="{79D988E6-CD97-443E-9000-6AA12D316BA7}" Directory_="ja_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.DataVisualization.resources.dll_4"/>
+    <ROW Component="Microsoft.ReportViewer.DataVisualization.resources.dll_5" ComponentId="{37A0F7C1-6E9A-4EAB-B8A2-63B84EC02CA2}" Directory_="ko_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.DataVisualization.resources.dll_5"/>
+    <ROW Component="Microsoft.ReportViewer.DataVisualization.resources.dll_6" ComponentId="{1EB27CB6-E673-41BC-A911-594E80FC6DD8}" Directory_="pt_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.DataVisualization.resources.dll_6"/>
+    <ROW Component="Microsoft.ReportViewer.DataVisualization.resources.dll_7" ComponentId="{FBADD3BB-2FFB-4D47-B671-A18209EFC07C}" Directory_="ru_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.DataVisualization.resources.dll_7"/>
+    <ROW Component="Microsoft.ReportViewer.DataVisualization.resources.dll_8" ComponentId="{D8552BCC-9C0C-4C3D-AF37-1756FEF77649}" Directory_="zhCHS_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.DataVisualization.resources.dll_8"/>
+    <ROW Component="Microsoft.ReportViewer.DataVisualization.resources.dll_9" ComponentId="{2A2635F0-CEEC-4AEA-B1E6-7DA20428CFE8}" Directory_="zhCHT_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.DataVisualization.resources.dll_9"/>
+    <ROW Component="Microsoft.ReportViewer.Design.dll" ComponentId="{C3CA790A-5874-4458-AB11-BC97EF65F67C}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Design.dll"/>
+    <ROW Component="Microsoft.ReportViewer.Design.resources.dll" ComponentId="{89D70E66-1342-4FBE-BE39-8CBA400B5136}" Directory_="de_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Design.resources.dll"/>
+    <ROW Component="Microsoft.ReportViewer.Design.resources.dll_1" ComponentId="{0E77103B-5453-4EE1-9ED3-91EC4C4B315E}" Directory_="es_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Design.resources.dll_1"/>
+    <ROW Component="Microsoft.ReportViewer.Design.resources.dll_2" ComponentId="{70BD3E30-E1F2-4693-950A-4DCAAF070A46}" Directory_="fr_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Design.resources.dll_2"/>
+    <ROW Component="Microsoft.ReportViewer.Design.resources.dll_3" ComponentId="{854D63AF-A3B2-425B-B389-BDDCD2C1B61B}" Directory_="it_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Design.resources.dll_3"/>
+    <ROW Component="Microsoft.ReportViewer.Design.resources.dll_4" ComponentId="{BDA95BC3-45BF-4E4F-B0CD-FB462DAFF364}" Directory_="ja_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Design.resources.dll_4"/>
+    <ROW Component="Microsoft.ReportViewer.Design.resources.dll_5" ComponentId="{BA6DA74C-25A1-4A1E-A603-D119D2F1BEBF}" Directory_="ko_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Design.resources.dll_5"/>
+    <ROW Component="Microsoft.ReportViewer.Design.resources.dll_6" ComponentId="{80C34ECC-0B8A-4E90-A8E5-B78B5DF39C69}" Directory_="pt_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Design.resources.dll_6"/>
+    <ROW Component="Microsoft.ReportViewer.Design.resources.dll_7" ComponentId="{F7139C5A-C5AD-4A57-8708-01B972A9B652}" Directory_="ru_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Design.resources.dll_7"/>
+    <ROW Component="Microsoft.ReportViewer.Design.resources.dll_8" ComponentId="{3A3ABB3E-CC85-4B72-AAC0-A562148B38BC}" Directory_="zhCHS_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Design.resources.dll_8"/>
+    <ROW Component="Microsoft.ReportViewer.Design.resources.dll_9" ComponentId="{4F5DAD87-0A5F-4CEA-9999-EC8F52F85554}" Directory_="zhCHT_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.Design.resources.dll_9"/>
+    <ROW Component="Microsoft.ReportViewer.ProcessingObjectModel.dll" ComponentId="{78AD257C-7B17-4D6B-9182-99850E18C0BC}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.ProcessingObjectModel.dll"/>
+    <ROW Component="Microsoft.ReportViewer.WinForms.dll" ComponentId="{37289DEE-7A5D-43C9-AF12-23C47A7FA02E}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.WinForms.dll"/>
+    <ROW Component="Microsoft.ReportViewer.WinForms.resources.dll" ComponentId="{BBC1F41B-9BAD-46A1-BB09-1B15751ADBAA}" Directory_="de_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.WinForms.resources.dll"/>
+    <ROW Component="Microsoft.ReportViewer.WinForms.resources.dll_1" ComponentId="{0AA81C82-750A-4F3A-8099-9A9850BFF08D}" Directory_="es_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.WinForms.resources.dll_1"/>
+    <ROW Component="Microsoft.ReportViewer.WinForms.resources.dll_2" ComponentId="{A986F648-C714-4D20-AE86-7CDEE9AAED0B}" Directory_="fr_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.WinForms.resources.dll_2"/>
+    <ROW Component="Microsoft.ReportViewer.WinForms.resources.dll_3" ComponentId="{B188F440-3018-4289-BF18-C283F03A828A}" Directory_="it_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.WinForms.resources.dll_3"/>
+    <ROW Component="Microsoft.ReportViewer.WinForms.resources.dll_4" ComponentId="{6E8E949B-1509-4C3B-B755-8C7C76CF06DE}" Directory_="ja_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.WinForms.resources.dll_4"/>
+    <ROW Component="Microsoft.ReportViewer.WinForms.resources.dll_5" ComponentId="{DEA8C4C0-8642-4DED-8BEA-8E79A0C9F20E}" Directory_="ko_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.WinForms.resources.dll_5"/>
+    <ROW Component="Microsoft.ReportViewer.WinForms.resources.dll_6" ComponentId="{6795004A-E03A-4744-AD74-1C33CDA4B512}" Directory_="pt_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.WinForms.resources.dll_6"/>
+    <ROW Component="Microsoft.ReportViewer.WinForms.resources.dll_7" ComponentId="{18B71EBC-5E73-43D9-82D4-351290D2D759}" Directory_="ru_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.WinForms.resources.dll_7"/>
+    <ROW Component="Microsoft.ReportViewer.WinForms.resources.dll_8" ComponentId="{6E615779-FAAF-4AA1-AF81-BCB34FCB199C}" Directory_="zhCHS_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.WinForms.resources.dll_8"/>
+    <ROW Component="Microsoft.ReportViewer.WinForms.resources.dll_9" ComponentId="{B08D8D94-62C2-428C-9925-811E4D757C8F}" Directory_="zhCHT_Dir" Attributes="0" KeyPath="Microsoft.ReportViewer.WinForms.resources.dll_9"/>
+    <ROW Component="Microsoft.SqlServer.Types.dll" ComponentId="{AB94BC21-2E7F-4CEB-B005-7D21180A6490}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.SqlServer.Types.dll"/>
+    <ROW Component="Microsoft.VisualStudio.ComponentModelHost.dll" ComponentId="{4625CBEA-A215-407F-B797-018D86F78C9C}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.VisualStudio.ComponentModelHost.dll"/>
+    <ROW Component="Microsoft.VisualStudio.Data.Core.dll" ComponentId="{2644D199-88B1-4480-AC30-1494BDE2A31C}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.VisualStudio.Data.Core.dll"/>
+    <ROW Component="Microsoft.VisualStudio.Data.Services.dll" ComponentId="{1FE30075-2314-44F3-9582-3922483A106C}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.VisualStudio.Data.Services.dll"/>
+    <ROW Component="Microsoft.VisualStudio.Debugger.Interop.11.0.dll" ComponentId="{3C0DF0AB-DCFD-4C4B-8022-7393F0DA537A}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.VisualStudio.Debugger.Interop.11.0.dll"/>
+    <ROW Component="Microsoft.VisualStudio.Debugger.InteropA.dll" ComponentId="{A2B5AE32-CABC-4402-8DDB-DB880CB5B43F}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.VisualStudio.Debugger.InteropA.dll"/>
+    <ROW Component="Microsoft.VisualStudio.Designer.Interfaces.dll" ComponentId="{7C4FA933-6E1B-4A03-88BC-142FD2B4F6B6}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.VisualStudio.Designer.Interfaces.dll"/>
+    <ROW Component="Microsoft.VisualStudio.Designer.Interfaces.xml" ComponentId="{C3194E1D-DF03-4F21-B2E6-9FEB6080F7BF}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.VisualStudio.Designer.Interfaces.xml" Type="0"/>
+    <ROW Component="Microsoft.VisualStudio.GraphModel.dll" ComponentId="{4ADDEF88-D9FE-49FF-99E4-701D72C0D6FB}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.VisualStudio.GraphModel.dll"/>
+    <ROW Component="Microsoft.VisualStudio.ManagedInterfaces.dll" ComponentId="{CB5940D9-4842-4694-8D50-A0E03D4FAA9A}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.VisualStudio.ManagedInterfaces.dll"/>
+    <ROW Component="Microsoft.VisualStudio.OLE.Interop.dll" ComponentId="{8A390E70-A8A8-4655-A081-9E7BF9494FF6}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.VisualStudio.OLE.Interop.dll"/>
+    <ROW Component="Microsoft.VisualStudio.ProjectAggregator.dll" ComponentId="{5770909C-F538-4C8B-B506-798196C36191}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.VisualStudio.ProjectAggregator.dll"/>
+    <ROW Component="Microsoft.VisualStudio.Shell.Immutable.10.0.dll" ComponentId="{E43791FE-13D4-4EC6-B256-DDCD0DB1AB01}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.VisualStudio.Shell.Immutable.10.0.dll"/>
+    <ROW Component="Microsoft.VisualStudio.Shell.Immutable.11.0.dll" ComponentId="{A381A55B-AE25-4839-AB1C-538D05C7957D}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.VisualStudio.Shell.Immutable.11.0.dll"/>
+    <ROW Component="Microsoft.VisualStudio.Shell.Immutable.12.0.dll" ComponentId="{210FA64B-E3A0-4F33-AF5D-79EA5E0E258A}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.VisualStudio.Shell.Immutable.12.0.dll"/>
+    <ROW Component="Microsoft.VisualStudio.Shell.Immutable.14.0.dll" ComponentId="{65BEC75A-4ADB-4028-96EC-503090819B64}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.VisualStudio.Shell.Immutable.14.0.dll"/>
+    <ROW Component="Microsoft.VisualStudio.Shell.Interop.10.0.dll" ComponentId="{42D24819-A501-4E45-911A-F3F7670CE27A}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.VisualStudio.Shell.Interop.10.0.dll"/>
+    <ROW Component="Microsoft.VisualStudio.Shell.Interop.11.0.dll" ComponentId="{E0A2D93E-FAC7-4EAB-9179-4C27F00B375C}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.VisualStudio.Shell.Interop.11.0.dll"/>
+    <ROW Component="Microsoft.VisualStudio.Shell.Interop.8.0.dll" ComponentId="{B2DC29AE-0BCF-47AC-B317-6AAA3921F0E1}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.VisualStudio.Shell.Interop.8.0.dll"/>
+    <ROW Component="Microsoft.VisualStudio.Shell.Interop.9.0.dll" ComponentId="{E379A511-61D0-467C-965F-2C8E8D104F44}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.VisualStudio.Shell.Interop.9.0.dll"/>
+    <ROW Component="Microsoft.VisualStudio.Shell.Interop.dll" ComponentId="{EC53213C-79A3-41FF-B4A4-247CEA7BF39E}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.VisualStudio.Shell.Interop.dll"/>
+    <ROW Component="Microsoft.VisualStudio.TemplateWizardInterface.dll" ComponentId="{6D150173-9004-41DE-AB27-6FCBA3C75ABA}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.VisualStudio.TemplateWizardInterface.dll"/>
+    <ROW Component="Microsoft.VisualStudio.TextManager.Interop.10.0.dll" ComponentId="{84F12DC8-E159-4142-9160-F07C4C1241C8}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.VisualStudio.TextManager.Interop.10.0.dll"/>
+    <ROW Component="Microsoft.VisualStudio.TextManager.Interop.8.0.dll" ComponentId="{D2C6E390-BF4C-4BF2-9E64-C829DBDCCD6F}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.VisualStudio.TextManager.Interop.8.0.dll"/>
+    <ROW Component="Microsoft.VisualStudio.TextManager.Interop.dll" ComponentId="{D9B2BF17-DB27-4A52-A97C-A27388F76006}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.VisualStudio.TextManager.Interop.dll"/>
+    <ROW Component="Microsoft.VisualStudio.VSHelp.dll" ComponentId="{9F8FD35C-EB9B-4B1E-AE0C-41C0A821AF4F}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.VisualStudio.VSHelp.dll"/>
+    <ROW Component="Microsoft.VisualStudio.WCFReference.Interop.dll" ComponentId="{9CDFA2AD-9479-4E9D-A98C-63F5B9C0A057}" Directory_="Debug_Dir" Attributes="0" KeyPath="Microsoft.VisualStudio.WCFReference.Interop.dll"/>
+    <ROW Component="Newtonsoft.Json.dll" ComponentId="{CA3B280D-9222-4A2F-8CF8-F6A222D02D96}" Directory_="Debug_Dir" Attributes="0" KeyPath="Newtonsoft.Json.dll"/>
+    <ROW Component="ProductInformation" ComponentId="{538139F8-5F71-41CB-9744-06886A77A12A}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="QuanLyNhaXe.exe" ComponentId="{EDEC50FE-B404-41A2-ADDC-C78C874B00AE}" Directory_="Debug_Dir" Attributes="0" KeyPath="QuanLyNhaXe.exe"/>
+    <ROW Component="QuanLyNhaXe.vshost.exe" ComponentId="{0F14BE9E-BFA6-4EB6-9654-DECC8828AA6B}" Directory_="Debug_Dir" Attributes="0" KeyPath="QuanLyNhaXe.vshost.exe"/>
+    <ROW Component="README.txt" ComponentId="{6C9D521C-0E5B-498A-B8CF-4B21DCE1D003}" Directory_="APPDIR" Attributes="0" KeyPath="README.txt" Type="0"/>
+    <ROW Component="ShockwaveFlashObjects.dll" ComponentId="{52518D6F-B8AD-43C1-8695-73ACA0E7D13B}" Directory_="Debug_Dir" Attributes="0" KeyPath="ShockwaveFlashObjects.dll"/>
+    <ROW Component="SqlServerSpatial140.dll" ComponentId="{A6DBB8E0-86AF-4ED5-8A0B-5C15C23CEAB5}" Directory_="x64_Dir" Attributes="256" KeyPath="SqlServerSpatial140.dll"/>
+    <ROW Component="SqlServerSpatial140.dll_1" ComponentId="{C62EE7FD-8BC9-463F-A9F3-1B80B395E30E}" Directory_="x86_Dir" Attributes="0" KeyPath="SqlServerSpatial140.dll_1"/>
+    <ROW Component="VSLangProj.dll" ComponentId="{9236EEE0-F0F8-4889-B231-07ECC7FFE8FA}" Directory_="Debug_Dir" Attributes="0" KeyPath="VSLangProj.dll"/>
+    <ROW Component="VSLangProj2.dll" ComponentId="{70C14441-8CDA-4595-A40F-9A3B7FF8624E}" Directory_="Debug_Dir" Attributes="0" KeyPath="VSLangProj2.dll"/>
+    <ROW Component="VSLangProj80.dll" ComponentId="{7DF41D25-DED9-48C3-A124-D87CFE55A025}" Directory_="Debug_Dir" Attributes="0" KeyPath="VSLangProj80.dll"/>
+    <ROW Component="msvcr120.dll" ComponentId="{A6F83A16-F36A-4D9A-A3B9-33071C39A17D}" Directory_="x64_Dir" Attributes="256" KeyPath="msvcr120.dll"/>
+    <ROW Component="msvcr120.dll_1" ComponentId="{6FF2A6F7-3D55-46A8-B487-4B3E31120380}" Directory_="x86_Dir" Attributes="0" KeyPath="msvcr120.dll_1"/>
+    <ROW Component="stdole.dll" ComponentId="{0E3FA2EB-F332-4375-8DAF-7990EE2F6934}" Directory_="Debug_Dir" Attributes="0" KeyPath="stdole.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="README.txt" Component_="README.txt" FileName="README.txt" Attributes="0" SourcePath="..\README.txt" SelfReg="false"/>
+    <ROW File="Createdatabase.bat" Component_="Createdatabase.bat" FileName="CREATE~1.BAT|Create database.bat" Attributes="0" SourcePath="..\Databases\Data\Create database.bat" SelfReg="false"/>
+    <ROW File="Data.sql" Component_="Createdatabase.bat" FileName="Data.sql" Attributes="0" SourcePath="..\Databases\Data\Data.sql" SelfReg="false"/>
+    <ROW File="AxShockwaveFlashObjects.dll" Component_="AxShockwaveFlashObjects.dll" FileName="AXSHOC~1.DLL|AxShockwaveFlashObjects.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\AxShockwaveFlashObjects.dll" SelfReg="false"/>
+    <ROW File="CrystalDecisions.CrystalReports.Engine.dll" Component_="CrystalDecisions.CrystalReports.Engine.dll" FileName="CRYSTA~1.DLL|CrystalDecisions.CrystalReports.Engine.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll" SelfReg="false"/>
+    <ROW File="CrystalDecisions.ReportAppServer.ClientDoc.dll" Component_="CrystalDecisions.ReportAppServer.ClientDoc.dll" FileName="CRYSTA~2.DLL|CrystalDecisions.ReportAppServer.ClientDoc.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll" SelfReg="false"/>
+    <ROW File="CrystalDecisions.ReportAppServer.CommLayer.dll" Component_="CrystalDecisions.ReportAppServer.CommLayer.dll" FileName="CRYSTA~3.DLL|CrystalDecisions.ReportAppServer.CommLayer.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll" SelfReg="false"/>
+    <ROW File="CrystalDecisions.ReportAppServer.CommonControls.dll" Component_="CrystalDecisions.ReportAppServer.CommonControls.dll" FileName="CRYSTA~4.DLL|CrystalDecisions.ReportAppServer.CommonControls.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll" SelfReg="false"/>
+    <ROW File="CrystalDecisions.ReportAppServer.CommonObjectModel.dll" Component_="CrystalDecisions.ReportAppServer.CommonObjectModel.dll" FileName="CRYSTA~5.DLL|CrystalDecisions.ReportAppServer.CommonObjectModel.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll" SelfReg="false"/>
+    <ROW File="CrystalDecisions.ReportAppServer.Controllers.dll" Component_="CrystalDecisions.ReportAppServer.Controllers.dll" FileName="CRYSTA~6.DLL|CrystalDecisions.ReportAppServer.Controllers.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll" SelfReg="false"/>
+    <ROW File="CrystalDecisions.ReportAppServer.CubeDefModel.dll" Component_="CrystalDecisions.ReportAppServer.CubeDefModel.dll" FileName="CRYSTA~7.DLL|CrystalDecisions.ReportAppServer.CubeDefModel.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll" SelfReg="false"/>
+    <ROW File="CrystalDecisions.ReportAppServer.DataDefModel.dll" Component_="CrystalDecisions.ReportAppServer.DataDefModel.dll" FileName="CRYSTA~8.DLL|CrystalDecisions.ReportAppServer.DataDefModel.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll" SelfReg="false"/>
+    <ROW File="CrystalDecisions.ReportAppServer.DataSetConversion.dll" Component_="CrystalDecisions.ReportAppServer.DataSetConversion.dll" FileName="CRYSTA~9.DLL|CrystalDecisions.ReportAppServer.DataSetConversion.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll" SelfReg="false"/>
+    <ROW File="CrystalDecisions.ReportAppServer.ObjectFactory.dll" Component_="CrystalDecisions.ReportAppServer.ObjectFactory.dll" FileName="CRYST~10.DLL|CrystalDecisions.ReportAppServer.ObjectFactory.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll" SelfReg="false"/>
+    <ROW File="CrystalDecisions.ReportAppServer.Prompting.dll" Component_="CrystalDecisions.ReportAppServer.Prompting.dll" FileName="CRYST~11.DLL|CrystalDecisions.ReportAppServer.Prompting.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll" SelfReg="false"/>
+    <ROW File="CrystalDecisions.ReportAppServer.ReportDefModel.dll" Component_="CrystalDecisions.ReportAppServer.ReportDefModel.dll" FileName="CRYST~12.DLL|CrystalDecisions.ReportAppServer.ReportDefModel.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll" SelfReg="false"/>
+    <ROW File="CrystalDecisions.ReportAppServer.XmlSerialize.dll" Component_="CrystalDecisions.ReportAppServer.XmlSerialize.dll" FileName="CRYST~13.DLL|CrystalDecisions.ReportAppServer.XmlSerialize.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll" SelfReg="false"/>
+    <ROW File="CrystalDecisions.ReportSource.dll" Component_="CrystalDecisions.ReportSource.dll" FileName="CRYST~14.DLL|CrystalDecisions.ReportSource.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\CrystalDecisions.ReportSource.dll" SelfReg="false"/>
+    <ROW File="CrystalDecisions.Shared.dll" Component_="CrystalDecisions.Shared.dll" FileName="CRYST~15.DLL|CrystalDecisions.Shared.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\CrystalDecisions.Shared.dll" SelfReg="false"/>
+    <ROW File="CrystalDecisions.Windows.Forms.dll" Component_="CrystalDecisions.Windows.Forms.dll" FileName="CRYST~16.DLL|CrystalDecisions.Windows.Forms.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\CrystalDecisions.Windows.Forms.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Common.resources.dll" Component_="Microsoft.ReportViewer.Common.resources.dll" FileName="MICROS~1.DLL|Microsoft.ReportViewer.Common.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.DataVisualization.resources.dll" Component_="Microsoft.ReportViewer.DataVisualization.resources.dll" FileName="MICROS~2.DLL|Microsoft.ReportViewer.DataVisualization.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Design.resources.dll" Component_="Microsoft.ReportViewer.Design.resources.dll" FileName="MICROS~3.DLL|Microsoft.ReportViewer.Design.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.WinForms.resources.dll" Component_="Microsoft.ReportViewer.WinForms.resources.dll" FileName="MICROS~4.DLL|Microsoft.ReportViewer.WinForms.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll" SelfReg="false"/>
+    <ROW File="EnvDTE.dll" Component_="EnvDTE.dll" FileName="EnvDTE.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\EnvDTE.dll" SelfReg="false"/>
+    <ROW File="EnvDTE80.dll" Component_="EnvDTE80.dll" FileName="EnvDTE80.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\EnvDTE80.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Common.resources.dll_1" Component_="Microsoft.ReportViewer.Common.resources.dll_1" FileName="MICROS~1.DLL|Microsoft.ReportViewer.Common.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.DataVisualization.resources.dll_1" Component_="Microsoft.ReportViewer.DataVisualization.resources.dll_1" FileName="MICROS~2.DLL|Microsoft.ReportViewer.DataVisualization.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Design.resources.dll_1" Component_="Microsoft.ReportViewer.Design.resources.dll_1" FileName="MICROS~3.DLL|Microsoft.ReportViewer.Design.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.WinForms.resources.dll_1" Component_="Microsoft.ReportViewer.WinForms.resources.dll_1" FileName="MICROS~4.DLL|Microsoft.ReportViewer.WinForms.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Common.resources.dll_2" Component_="Microsoft.ReportViewer.Common.resources.dll_2" FileName="MICROS~1.DLL|Microsoft.ReportViewer.Common.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.DataVisualization.resources.dll_2" Component_="Microsoft.ReportViewer.DataVisualization.resources.dll_2" FileName="MICROS~2.DLL|Microsoft.ReportViewer.DataVisualization.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Design.resources.dll_2" Component_="Microsoft.ReportViewer.Design.resources.dll_2" FileName="MICROS~3.DLL|Microsoft.ReportViewer.Design.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.WinForms.resources.dll_2" Component_="Microsoft.ReportViewer.WinForms.resources.dll_2" FileName="MICROS~4.DLL|Microsoft.ReportViewer.WinForms.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Common.resources.dll_3" Component_="Microsoft.ReportViewer.Common.resources.dll_3" FileName="MICROS~1.DLL|Microsoft.ReportViewer.Common.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.DataVisualization.resources.dll_3" Component_="Microsoft.ReportViewer.DataVisualization.resources.dll_3" FileName="MICROS~2.DLL|Microsoft.ReportViewer.DataVisualization.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Design.resources.dll_3" Component_="Microsoft.ReportViewer.Design.resources.dll_3" FileName="MICROS~3.DLL|Microsoft.ReportViewer.Design.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.WinForms.resources.dll_3" Component_="Microsoft.ReportViewer.WinForms.resources.dll_3" FileName="MICROS~4.DLL|Microsoft.ReportViewer.WinForms.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Common.resources.dll_4" Component_="Microsoft.ReportViewer.Common.resources.dll_4" FileName="MICROS~1.DLL|Microsoft.ReportViewer.Common.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.DataVisualization.resources.dll_4" Component_="Microsoft.ReportViewer.DataVisualization.resources.dll_4" FileName="MICROS~2.DLL|Microsoft.ReportViewer.DataVisualization.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Design.resources.dll_4" Component_="Microsoft.ReportViewer.Design.resources.dll_4" FileName="MICROS~3.DLL|Microsoft.ReportViewer.Design.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.WinForms.resources.dll_4" Component_="Microsoft.ReportViewer.WinForms.resources.dll_4" FileName="MICROS~4.DLL|Microsoft.ReportViewer.WinForms.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Common.resources.dll_5" Component_="Microsoft.ReportViewer.Common.resources.dll_5" FileName="MICROS~1.DLL|Microsoft.ReportViewer.Common.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.DataVisualization.resources.dll_5" Component_="Microsoft.ReportViewer.DataVisualization.resources.dll_5" FileName="MICROS~2.DLL|Microsoft.ReportViewer.DataVisualization.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Design.resources.dll_5" Component_="Microsoft.ReportViewer.Design.resources.dll_5" FileName="MICROS~3.DLL|Microsoft.ReportViewer.Design.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.WinForms.resources.dll_5" Component_="Microsoft.ReportViewer.WinForms.resources.dll_5" FileName="MICROS~4.DLL|Microsoft.ReportViewer.WinForms.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Build.Framework.dll" Component_="Microsoft.Build.Framework.dll" FileName="MICROS~1.DLL|Microsoft.Build.Framework.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.Build.Framework.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Build.Tasks.Core.dll" Component_="Microsoft.Build.Tasks.Core.dll" FileName="MICROS~2.DLL|Microsoft.Build.Tasks.Core.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.Build.Tasks.Core.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Build.Utilities.Core.dll" Component_="Microsoft.Build.Utilities.Core.dll" FileName="MICROS~3.DLL|Microsoft.Build.Utilities.Core.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.Build.Utilities.Core.dll" SelfReg="false"/>
+    <ROW File="Microsoft.MSXML.dll" Component_="Microsoft.MSXML.dll" FileName="MICROS~4.DLL|Microsoft.MSXML.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.MSXML.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Common.dll" Component_="Microsoft.ReportViewer.Common.dll" FileName="MICROS~5.DLL|Microsoft.ReportViewer.Common.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.ReportViewer.Common.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.DataVisualization.dll" Component_="Microsoft.ReportViewer.DataVisualization.dll" FileName="MICROS~6.DLL|Microsoft.ReportViewer.DataVisualization.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Design.dll" Component_="Microsoft.ReportViewer.Design.dll" FileName="MICROS~7.DLL|Microsoft.ReportViewer.Design.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.ReportViewer.Design.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.ProcessingObjectModel.dll" Component_="Microsoft.ReportViewer.ProcessingObjectModel.dll" FileName="MICROS~8.DLL|Microsoft.ReportViewer.ProcessingObjectModel.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.WinForms.dll" Component_="Microsoft.ReportViewer.WinForms.dll" FileName="MICROS~9.DLL|Microsoft.ReportViewer.WinForms.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.ReportViewer.WinForms.dll" SelfReg="false"/>
+    <ROW File="Microsoft.SqlServer.Types.dll" Component_="Microsoft.SqlServer.Types.dll" FileName="MICRO~10.DLL|Microsoft.SqlServer.Types.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.SqlServer.Types.dll" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.ComponentModelHost.dll" Component_="Microsoft.VisualStudio.ComponentModelHost.dll" FileName="MICRO~11.DLL|Microsoft.VisualStudio.ComponentModelHost.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.VisualStudio.ComponentModelHost.dll" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.Data.Core.dll" Component_="Microsoft.VisualStudio.Data.Core.dll" FileName="MICRO~12.DLL|Microsoft.VisualStudio.Data.Core.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.VisualStudio.Data.Core.dll" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.Data.Services.dll" Component_="Microsoft.VisualStudio.Data.Services.dll" FileName="MICRO~13.DLL|Microsoft.VisualStudio.Data.Services.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.VisualStudio.Data.Services.dll" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.Debugger.Interop.11.0.dll" Component_="Microsoft.VisualStudio.Debugger.Interop.11.0.dll" FileName="MICRO~14.DLL|Microsoft.VisualStudio.Debugger.Interop.11.0.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.VisualStudio.Debugger.Interop.11.0.dll" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.Debugger.InteropA.dll" Component_="Microsoft.VisualStudio.Debugger.InteropA.dll" FileName="MICRO~15.DLL|Microsoft.VisualStudio.Debugger.InteropA.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.VisualStudio.Debugger.InteropA.dll" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.Designer.Interfaces.dll" Component_="Microsoft.VisualStudio.Designer.Interfaces.dll" FileName="MICRO~16.DLL|Microsoft.VisualStudio.Designer.Interfaces.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.VisualStudio.Designer.Interfaces.dll" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.Designer.Interfaces.xml" Component_="Microsoft.VisualStudio.Designer.Interfaces.xml" FileName="MICROS~1.XML|Microsoft.VisualStudio.Designer.Interfaces.xml" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.VisualStudio.Designer.Interfaces.xml" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.GraphModel.dll" Component_="Microsoft.VisualStudio.GraphModel.dll" FileName="MICRO~17.DLL|Microsoft.VisualStudio.GraphModel.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.VisualStudio.GraphModel.dll" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.ManagedInterfaces.dll" Component_="Microsoft.VisualStudio.ManagedInterfaces.dll" FileName="MICRO~18.DLL|Microsoft.VisualStudio.ManagedInterfaces.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.VisualStudio.ManagedInterfaces.dll" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.OLE.Interop.dll" Component_="Microsoft.VisualStudio.OLE.Interop.dll" FileName="MICRO~19.DLL|Microsoft.VisualStudio.OLE.Interop.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.ProjectAggregator.dll" Component_="Microsoft.VisualStudio.ProjectAggregator.dll" FileName="MICRO~20.DLL|Microsoft.VisualStudio.ProjectAggregator.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.VisualStudio.ProjectAggregator.dll" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.Shell.Immutable.10.0.dll" Component_="Microsoft.VisualStudio.Shell.Immutable.10.0.dll" FileName="MICRO~21.DLL|Microsoft.VisualStudio.Shell.Immutable.10.0.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.10.0.dll" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.Shell.Immutable.10.0.xml" Component_="Microsoft.VisualStudio.Designer.Interfaces.xml" FileName="MICROS~2.XML|Microsoft.VisualStudio.Shell.Immutable.10.0.xml" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.10.0.xml" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.Shell.Immutable.11.0.dll" Component_="Microsoft.VisualStudio.Shell.Immutable.11.0.dll" FileName="MICRO~22.DLL|Microsoft.VisualStudio.Shell.Immutable.11.0.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.11.0.dll" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.Shell.Immutable.11.0.xml" Component_="Microsoft.VisualStudio.Designer.Interfaces.xml" FileName="MICROS~3.XML|Microsoft.VisualStudio.Shell.Immutable.11.0.xml" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.11.0.xml" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.Shell.Immutable.12.0.dll" Component_="Microsoft.VisualStudio.Shell.Immutable.12.0.dll" FileName="MICRO~23.DLL|Microsoft.VisualStudio.Shell.Immutable.12.0.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.12.0.dll" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.Shell.Immutable.12.0.xml" Component_="Microsoft.VisualStudio.Designer.Interfaces.xml" FileName="MICROS~4.XML|Microsoft.VisualStudio.Shell.Immutable.12.0.xml" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.12.0.xml" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.Shell.Immutable.14.0.dll" Component_="Microsoft.VisualStudio.Shell.Immutable.14.0.dll" FileName="MICRO~24.DLL|Microsoft.VisualStudio.Shell.Immutable.14.0.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.14.0.dll" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.Shell.Immutable.14.0.xml" Component_="Microsoft.VisualStudio.Designer.Interfaces.xml" FileName="MICROS~5.XML|Microsoft.VisualStudio.Shell.Immutable.14.0.xml" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.VisualStudio.Shell.Immutable.14.0.xml" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.Shell.Interop.10.0.dll" Component_="Microsoft.VisualStudio.Shell.Interop.10.0.dll" FileName="MICRO~25.DLL|Microsoft.VisualStudio.Shell.Interop.10.0.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.VisualStudio.Shell.Interop.10.0.dll" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.Shell.Interop.11.0.dll" Component_="Microsoft.VisualStudio.Shell.Interop.11.0.dll" FileName="MICRO~26.DLL|Microsoft.VisualStudio.Shell.Interop.11.0.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.VisualStudio.Shell.Interop.11.0.dll" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.Shell.Interop.8.0.dll" Component_="Microsoft.VisualStudio.Shell.Interop.8.0.dll" FileName="MICRO~27.DLL|Microsoft.VisualStudio.Shell.Interop.8.0.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.Shell.Interop.9.0.dll" Component_="Microsoft.VisualStudio.Shell.Interop.9.0.dll" FileName="MICRO~28.DLL|Microsoft.VisualStudio.Shell.Interop.9.0.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.VisualStudio.Shell.Interop.9.0.dll" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.Shell.Interop.dll" Component_="Microsoft.VisualStudio.Shell.Interop.dll" FileName="MICRO~29.DLL|Microsoft.VisualStudio.Shell.Interop.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.TemplateWizardInterface.dll" Component_="Microsoft.VisualStudio.TemplateWizardInterface.dll" FileName="MICRO~30.DLL|Microsoft.VisualStudio.TemplateWizardInterface.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.dll" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.TemplateWizardInterface.xml" Component_="Microsoft.VisualStudio.Designer.Interfaces.xml" FileName="MICROS~6.XML|Microsoft.VisualStudio.TemplateWizardInterface.xml" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.xml" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.TextManager.Interop.10.0.dll" Component_="Microsoft.VisualStudio.TextManager.Interop.10.0.dll" FileName="MICRO~31.DLL|Microsoft.VisualStudio.TextManager.Interop.10.0.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.10.0.dll" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.TextManager.Interop.8.0.dll" Component_="Microsoft.VisualStudio.TextManager.Interop.8.0.dll" FileName="MICRO~32.DLL|Microsoft.VisualStudio.TextManager.Interop.8.0.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.TextManager.Interop.dll" Component_="Microsoft.VisualStudio.TextManager.Interop.dll" FileName="MICRO~33.DLL|Microsoft.VisualStudio.TextManager.Interop.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.VSHelp.dll" Component_="Microsoft.VisualStudio.VSHelp.dll" FileName="MICRO~34.DLL|Microsoft.VisualStudio.VSHelp.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.VisualStudio.VSHelp.dll" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.WCFReference.Interop.dll" Component_="Microsoft.VisualStudio.WCFReference.Interop.dll" FileName="MICRO~35.DLL|Microsoft.VisualStudio.WCFReference.Interop.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.VisualStudio.WCFReference.Interop.dll" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.WCFReference.Interop.xml" Component_="Microsoft.VisualStudio.Designer.Interfaces.xml" FileName="MICROS~7.XML|Microsoft.VisualStudio.WCFReference.Interop.xml" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Microsoft.VisualStudio.WCFReference.Interop.xml" SelfReg="false"/>
+    <ROW File="Newtonsoft.Json.dll" Component_="Newtonsoft.Json.dll" FileName="NEWTON~1.DLL|Newtonsoft.Json.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\Newtonsoft.Json.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Common.resources.dll_6" Component_="Microsoft.ReportViewer.Common.resources.dll_6" FileName="MICROS~1.DLL|Microsoft.ReportViewer.Common.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.DataVisualization.resources.dll_6" Component_="Microsoft.ReportViewer.DataVisualization.resources.dll_6" FileName="MICROS~2.DLL|Microsoft.ReportViewer.DataVisualization.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Design.resources.dll_6" Component_="Microsoft.ReportViewer.Design.resources.dll_6" FileName="MICROS~3.DLL|Microsoft.ReportViewer.Design.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.WinForms.resources.dll_6" Component_="Microsoft.ReportViewer.WinForms.resources.dll_6" FileName="MICROS~4.DLL|Microsoft.ReportViewer.WinForms.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll" SelfReg="false"/>
+    <ROW File="QuanLyNhaXe.exe" Component_="QuanLyNhaXe.exe" FileName="QUANLY~1.EXE|QuanLyNhaXe.exe" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\QuanLyNhaXe.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="QuanLyNhaXe.exe.config" Component_="Microsoft.VisualStudio.Designer.Interfaces.xml" FileName="QUANLY~1.CON|QuanLyNhaXe.exe.config" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\QuanLyNhaXe.exe.config" SelfReg="false"/>
+    <ROW File="QuanLyNhaXe.pdb" Component_="QuanLyNhaXe.exe" FileName="QUANLY~1.PDB|QuanLyNhaXe.pdb" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\QuanLyNhaXe.pdb" SelfReg="false"/>
+    <ROW File="QuanLyNhaXe.vshost.exe" Component_="QuanLyNhaXe.vshost.exe" FileName="QUANLY~2.EXE|QuanLyNhaXe.vshost.exe" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\QuanLyNhaXe.vshost.exe" SelfReg="false"/>
+    <ROW File="QuanLyNhaXe.vshost.exe.config" Component_="Microsoft.VisualStudio.Designer.Interfaces.xml" FileName="QUANLY~2.CON|QuanLyNhaXe.vshost.exe.config" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\QuanLyNhaXe.vshost.exe.config" SelfReg="false"/>
+    <ROW File="QuanLyNhaXe.vshost.exe.manifest" Component_="Microsoft.VisualStudio.Designer.Interfaces.xml" FileName="QUANLY~1.MAN|QuanLyNhaXe.vshost.exe.manifest" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\QuanLyNhaXe.vshost.exe.manifest" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Common.resources.dll_7" Component_="Microsoft.ReportViewer.Common.resources.dll_7" FileName="MICROS~1.DLL|Microsoft.ReportViewer.Common.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.DataVisualization.resources.dll_7" Component_="Microsoft.ReportViewer.DataVisualization.resources.dll_7" FileName="MICROS~2.DLL|Microsoft.ReportViewer.DataVisualization.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Design.resources.dll_7" Component_="Microsoft.ReportViewer.Design.resources.dll_7" FileName="MICROS~3.DLL|Microsoft.ReportViewer.Design.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.WinForms.resources.dll_7" Component_="Microsoft.ReportViewer.WinForms.resources.dll_7" FileName="MICROS~4.DLL|Microsoft.ReportViewer.WinForms.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll" SelfReg="false"/>
+    <ROW File="ShockwaveFlashObjects.dll" Component_="ShockwaveFlashObjects.dll" FileName="SHOCKW~1.DLL|ShockwaveFlashObjects.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\ShockwaveFlashObjects.dll" SelfReg="false"/>
+    <ROW File="msvcr120.dll" Component_="msvcr120.dll" FileName="msvcr120.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\SqlServerTypes\x64\msvcr120.dll" SelfReg="false"/>
+    <ROW File="SqlServerSpatial140.dll" Component_="SqlServerSpatial140.dll" FileName="SQLSER~1.DLL|SqlServerSpatial140.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll" SelfReg="false"/>
+    <ROW File="msvcr120.dll_1" Component_="msvcr120.dll_1" FileName="msvcr120.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\SqlServerTypes\x86\msvcr120.dll" SelfReg="false"/>
+    <ROW File="SqlServerSpatial140.dll_1" Component_="SqlServerSpatial140.dll_1" FileName="SQLSER~1.DLL|SqlServerSpatial140.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll" SelfReg="false"/>
+    <ROW File="stdole.dll" Component_="stdole.dll" FileName="stdole.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\stdole.dll" SelfReg="false"/>
+    <ROW File="VSLangProj.dll" Component_="VSLangProj.dll" FileName="VSLANG~1.DLL|VSLangProj.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\VSLangProj.dll" SelfReg="false"/>
+    <ROW File="VSLangProj2.dll" Component_="VSLangProj2.dll" FileName="VSLANG~2.DLL|VSLangProj2.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\VSLangProj2.dll" SelfReg="false"/>
+    <ROW File="VSLangProj80.dll" Component_="VSLangProj80.dll" FileName="VSLANG~3.DLL|VSLangProj80.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\VSLangProj80.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Common.resources.dll_8" Component_="Microsoft.ReportViewer.Common.resources.dll_8" FileName="MICROS~1.DLL|Microsoft.ReportViewer.Common.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.DataVisualization.resources.dll_8" Component_="Microsoft.ReportViewer.DataVisualization.resources.dll_8" FileName="MICROS~2.DLL|Microsoft.ReportViewer.DataVisualization.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Design.resources.dll_8" Component_="Microsoft.ReportViewer.Design.resources.dll_8" FileName="MICROS~3.DLL|Microsoft.ReportViewer.Design.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.WinForms.resources.dll_8" Component_="Microsoft.ReportViewer.WinForms.resources.dll_8" FileName="MICROS~4.DLL|Microsoft.ReportViewer.WinForms.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Common.resources.dll_9" Component_="Microsoft.ReportViewer.Common.resources.dll_9" FileName="MICROS~1.DLL|Microsoft.ReportViewer.Common.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.DataVisualization.resources.dll_9" Component_="Microsoft.ReportViewer.DataVisualization.resources.dll_9" FileName="MICROS~2.DLL|Microsoft.ReportViewer.DataVisualization.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Design.resources.dll_9" Component_="Microsoft.ReportViewer.Design.resources.dll_9" FileName="MICROS~3.DLL|Microsoft.ReportViewer.Design.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.WinForms.resources.dll_9" Component_="Microsoft.ReportViewer.WinForms.resources.dll_9" FileName="MICROS~4.DLL|Microsoft.ReportViewer.WinForms.resources.dll" Attributes="0" SourcePath="..\QuanLyNhaXe\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll" SelfReg="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
+    <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrapperUISequenceComponent">
+    <ROW Action="AI_DetectSoftware" Sequence="101"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" Languages="en" InstallationType="4" UseLargeSchema="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
+    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceTypeDlg.aip"/>
+    <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceWelcomeDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;classic\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRemoveDlg.aip"/>
+    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRepairDlg.aip"/>
+    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="SoftwareDetector.dll" SourcePath="&lt;AI_CUSTACTS&gt;SoftwareDetector.dll"/>
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="501"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RepairButton" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="1"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="399" Options="1"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="299" Options="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="APPDIR" Component_="APPDIR" ManualDelete="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DetectSoftware" Type="257" Source="SoftwareDetector.dll" Target="OnDetectSoftware"/>
+    <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
+    <ROW Action="AI_EnableDebugLog" Type="321" Source="aicustact.dll" Target="EnableDebugLog"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatCompsComponent">
+    <ROW Feature_="MainFeature" Component_="APPDIR"/>
+    <ROW Feature_="MainFeature" Component_="ProductInformation"/>
+    <ROW Feature_="MainFeature" Component_="README.txt"/>
+    <ROW Feature_="MainFeature" Component_="Createdatabase.bat"/>
+    <ROW Feature_="MainFeature" Component_="AxShockwaveFlashObjects.dll"/>
+    <ROW Feature_="MainFeature" Component_="CrystalDecisions.CrystalReports.Engine.dll"/>
+    <ROW Feature_="MainFeature" Component_="CrystalDecisions.ReportAppServer.ClientDoc.dll"/>
+    <ROW Feature_="MainFeature" Component_="CrystalDecisions.ReportAppServer.CommLayer.dll"/>
+    <ROW Feature_="MainFeature" Component_="CrystalDecisions.ReportAppServer.CommonControls.dll"/>
+    <ROW Feature_="MainFeature" Component_="CrystalDecisions.ReportAppServer.CommonObjectModel.dll"/>
+    <ROW Feature_="MainFeature" Component_="CrystalDecisions.ReportAppServer.Controllers.dll"/>
+    <ROW Feature_="MainFeature" Component_="CrystalDecisions.ReportAppServer.CubeDefModel.dll"/>
+    <ROW Feature_="MainFeature" Component_="CrystalDecisions.ReportAppServer.DataDefModel.dll"/>
+    <ROW Feature_="MainFeature" Component_="CrystalDecisions.ReportAppServer.DataSetConversion.dll"/>
+    <ROW Feature_="MainFeature" Component_="CrystalDecisions.ReportAppServer.ObjectFactory.dll"/>
+    <ROW Feature_="MainFeature" Component_="CrystalDecisions.ReportAppServer.Prompting.dll"/>
+    <ROW Feature_="MainFeature" Component_="CrystalDecisions.ReportAppServer.ReportDefModel.dll"/>
+    <ROW Feature_="MainFeature" Component_="CrystalDecisions.ReportAppServer.XmlSerialize.dll"/>
+    <ROW Feature_="MainFeature" Component_="CrystalDecisions.ReportSource.dll"/>
+    <ROW Feature_="MainFeature" Component_="CrystalDecisions.Shared.dll"/>
+    <ROW Feature_="MainFeature" Component_="CrystalDecisions.Windows.Forms.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Common.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.DataVisualization.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Design.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.WinForms.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="EnvDTE.dll"/>
+    <ROW Feature_="MainFeature" Component_="EnvDTE80.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Common.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.DataVisualization.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Design.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.WinForms.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Common.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.DataVisualization.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Design.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.WinForms.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Common.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.DataVisualization.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Design.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.WinForms.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Common.resources.dll_4"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.DataVisualization.resources.dll_4"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Design.resources.dll_4"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.WinForms.resources.dll_4"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Common.resources.dll_5"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.DataVisualization.resources.dll_5"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Design.resources.dll_5"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.WinForms.resources.dll_5"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Build.Framework.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Build.Tasks.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Build.Utilities.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.MSXML.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Common.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.DataVisualization.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Design.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.ProcessingObjectModel.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.WinForms.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.SqlServer.Types.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.VisualStudio.ComponentModelHost.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.VisualStudio.Data.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.VisualStudio.Data.Services.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.VisualStudio.Debugger.Interop.11.0.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.VisualStudio.Debugger.InteropA.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.VisualStudio.Designer.Interfaces.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.VisualStudio.Designer.Interfaces.xml"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.VisualStudio.GraphModel.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.VisualStudio.ManagedInterfaces.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.VisualStudio.OLE.Interop.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.VisualStudio.ProjectAggregator.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.VisualStudio.Shell.Immutable.10.0.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.VisualStudio.Shell.Immutable.11.0.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.VisualStudio.Shell.Immutable.12.0.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.VisualStudio.Shell.Immutable.14.0.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.VisualStudio.Shell.Interop.10.0.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.VisualStudio.Shell.Interop.11.0.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.VisualStudio.Shell.Interop.8.0.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.VisualStudio.Shell.Interop.9.0.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.VisualStudio.Shell.Interop.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.VisualStudio.TemplateWizardInterface.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.VisualStudio.TextManager.Interop.10.0.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.VisualStudio.TextManager.Interop.8.0.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.VisualStudio.TextManager.Interop.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.VisualStudio.VSHelp.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.VisualStudio.WCFReference.Interop.dll"/>
+    <ROW Feature_="MainFeature" Component_="Newtonsoft.Json.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Common.resources.dll_6"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.DataVisualization.resources.dll_6"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Design.resources.dll_6"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.WinForms.resources.dll_6"/>
+    <ROW Feature_="MainFeature" Component_="QuanLyNhaXe.exe"/>
+    <ROW Feature_="MainFeature" Component_="QuanLyNhaXe.vshost.exe"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Common.resources.dll_7"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.DataVisualization.resources.dll_7"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Design.resources.dll_7"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.WinForms.resources.dll_7"/>
+    <ROW Feature_="MainFeature" Component_="ShockwaveFlashObjects.dll"/>
+    <ROW Feature_="MainFeature" Component_="msvcr120.dll"/>
+    <ROW Feature_="MainFeature" Component_="SqlServerSpatial140.dll"/>
+    <ROW Feature_="MainFeature" Component_="msvcr120.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="SqlServerSpatial140.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="stdole.dll"/>
+    <ROW Feature_="MainFeature" Component_="VSLangProj.dll"/>
+    <ROW Feature_="MainFeature" Component_="VSLangProj2.dll"/>
+    <ROW Feature_="MainFeature" Component_="VSLangProj80.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Common.resources.dll_8"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.DataVisualization.resources.dll_8"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Design.resources.dll_8"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.WinForms.resources.dll_8"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Common.resources.dll_9"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.DataVisualization.resources.dll_9"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Design.resources.dll_9"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.WinForms.resources.dll_9"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+    <ROW Action="AI_DetectSoftware" Sequence="101"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
+    <ROW Action="AI_DpiContentScale" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+    <ROW Action="AI_DetectSoftware" Sequence="101"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="((VersionNT &lt;&gt; 501) AND (VersionNT &lt;&gt; 502))" Description="[ProductName] cannot be installed on [WindowsTypeNT5XDisplay]." DescriptionLocId="AI.LaunchCondition.NoNT5X" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 400)" Description="[ProductName] cannot be installed on [WindowsTypeNT40Display]." DescriptionLocId="AI.LaunchCondition.NoNT40" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 500)" Description="[ProductName] cannot be installed on [WindowsTypeNT50Display]." DescriptionLocId="AI.LaunchCondition.NoNT50" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="AI_DETECTED_DOTNET_VERSION &gt;= AI_REQUIRED_DOTNET_VERSION" Description="[ProductName] cannot be installed on systems with .NET Framework version lower than [AI_REQUIRED_DOTNET_DISPLAY]." DescriptionLocId="AI.LaunchCondition.DotNET" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="AI_DETECTED_SQLEXPRESS_VERSION &gt;= AI_REQUIRED_SQLEXPRESS_VERSION" Description="[ProductName] cannot be installed on systems without [AI_REQUIRED_SQLEXPRESS_DISPLAY] or higher." DescriptionLocId="AI.LaunchCondition.SQLExpress" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="VersionNT" Description="[ProductName] cannot be installed on [WindowsType9XDisplay]." DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
+    <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="QuanLyNhaXe" Directory_="APPDIR" Name="QUANLY~1|QuanLyNhaXe" Component_="QuanLyNhaXe.exe" Target="[#QuanLyNhaXe.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="Debug_Dir"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="classic"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="257" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+</DOCUMENT>
