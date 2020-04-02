@@ -34,5 +34,20 @@ namespace QuanLyNhaXe.DAO
 
             return list;
         }
+
+        public Category GetCategoryByID(int id)
+        {
+            Category category = null;
+
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from TicketCategory where id = " + id);
+
+            foreach (DataRow item in data.Rows)
+            {
+                category = new Category(item);
+                return category;
+            }
+
+            return category;
+        }
     }
 }

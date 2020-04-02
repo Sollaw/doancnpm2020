@@ -23,7 +23,7 @@ namespace QuanLyNhaXe.DAO
         public int GetUnCheckOutBillIDByCarID(int id)
         {
             DataTable data = DataProvider.Instance.ExecuteQuery("select * from Bill where idCar = " + id + " AND status = 0");
-
+            
             if(data.Rows.Count > 0)
             {
                 Bill bill = new Bill(data.Rows[0]);
@@ -33,15 +33,20 @@ namespace QuanLyNhaXe.DAO
             return -1;
         }
 
-        public void CheckOut(int id)
+        public void CheckOut(int id, int discount, float totalPrice)
         {
-            string query = "update Bill set status = 1 where id = " + id;
+            string query = "update Bill set DateCheckOut = getdate(), status = 1 " + ", discount = " + discount + ", totalPrice = " + totalPrice + " where id = " + id;
             DataProvider.Instance.ExecuteNonQuery(query);
         }
 
         public void InsertBill(int id)
         {
             DataProvider.Instance.ExecuteNonQuery("exec USP_InsertBill @idCar", new object[] { id });
+        }
+
+        public DataTable GetListBillByDate(DateTime checkIn, DateTime checkOut)
+        {
+            return DataProvider.Instance.ExecuteQuery("exec USP_GetListBillByDate @checkIn , @checkOut", new object[] { checkIn, checkOut });
         }
 
         public int GetMaxIDBill()

@@ -1,4 +1,5 @@
 ﻿using QuanLyNhaXe.DAO;
+using QuanLyNhaXe.DTO;
 using System;
 using System.Windows.Forms;
 
@@ -18,8 +19,10 @@ namespace QuanLyNhaXe
 
             if (Login(userName, passWord))
             {
+                Account loginAccount = AccountDAO.Instance.GetAccountByUserName(userName);
+
                 this.Hide();
-                fCarManager f = new fCarManager();
+                fCarManager f = new fCarManager(loginAccount);
                 f.ShowDialog();
                 this.Show();
             }

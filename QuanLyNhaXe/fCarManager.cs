@@ -16,14 +16,30 @@ namespace QuanLyNhaXe
 {
     public partial class fCarManager : Form
     {
-        public fCarManager()
+        private Account loginAccount;
+        public Account LoginAccount
+        {
+            get { return loginAccount; }
+            set { loginAccount = value; ChangeAccount(loginAccount.Type); }
+        }
+
+        public fCarManager(Account acc)
         {
             InitializeComponent();
 
+            this.LoginAccount = acc;
+
             LoadCar();
             LoadCategory();
+            LoadComboBoxCar(cbSwitchCar);
         }
         #region Methods
+        void ChangeAccount(int type)
+        {
+            adminToolStripMenuItem.Enabled = type == 1;
+            thôngTinCáNhânToolStripMenuItem.Text += " (" + LoginAccount.DisplayName + ")";
+        }
+
         void LoadCategory()
         {
             List<Category> listCategory = CategoryDAO.Instance.GetListCategory();
@@ -87,6 +103,11 @@ namespace QuanLyNhaXe
             txbTotalPrice.Text = totalPrice.ToString("c", culture);
         }
 
+        void LoadComboBoxCar(ComboBox cb)
+        {
+            cb.DataSource = CarDAO.Instance.LoadCarList();
+            cb.DisplayMember = "Name";
+        }
 
         #endregion
 
@@ -103,16 +124,55 @@ namespace QuanLyNhaXe
             this.Close();
         }
 
-        private void thôngTinTàiKhoảnToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fAccountProfile f = new fAccountProfile();
+            fAccountProfile f = new fAccountProfile(loginAccount);
+            f.UpdateAccount += f_UpdateAccount;
             f.ShowDialog();
+        }
+
+        void f_UpdateAccount(object sender, AccountEvent e)
+        {
+            thôngTinCáNhânToolStripMenuItem.Text = "Thông tin cá nhân (" + e.Acc.DisplayName + ")";
         }
 
         private void adminToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fAdmin f = new fAdmin();
+
+            f.loginAccount = LoginAccount;
+            f.InsertTicket += f_InsertTicket;
+            f.DeleteTicket += f_DeleteTicket;
+            f.UpdateTicket += f_UpdateTicket;
             f.ShowDialog();
+        }
+
+        private void f_UpdateTicket(object sender, EventArgs e)
+        {
+            LoadTicketListByCategoryID((cbCategory.SelectedItem as Category).ID);
+            if (lsvBill.Tag != null)
+            {
+                ShowBill((lsvBill.Tag as Car).ID);
+            }
+        }
+
+        private void f_DeleteTicket(object sender, EventArgs e)
+        {
+            LoadTicketListByCategoryID((cbCategory.SelectedItem as Category).ID);
+            if (lsvBill.Tag != null)
+            {
+                ShowBill((lsvBill.Tag as Car).ID);
+            }
+            LoadCar();
+        }
+
+        private void f_InsertTicket(object sender, EventArgs e)
+        {
+            LoadTicketListByCategoryID((cbCategory.SelectedItem as Category).ID);
+            if (lsvBill.Tag != null)
+            {
+                ShowBill((lsvBill.Tag as Car).ID);
+            }
         }
 
         private void cbCategory_SelectedIndexChanged(object sender, EventArgs e)
@@ -135,6 +195,13 @@ namespace QuanLyNhaXe
         private void btnAddTicket_Click(object sender, EventArgs e)
         {
             Car car = lsvBill.Tag as Car;
+
+            if(car == null)
+            {
+                MessageBox.Show("Hãy chọn xe");
+
+                return;
+            }
 
             int idBill = BillDAO.Instance.GetUnCheckOutBillIDByCarID(car.ID);
             int idTicket = (cbTicket.SelectedItem as Ticket).ID;
@@ -160,16 +227,32 @@ namespace QuanLyNhaXe
             Car car = lsvBill.Tag as Car;
 
             int idBill = BillDAO.Instance.GetUnCheckOutBillIDByCarID(car.ID);
-
+            int discount = (int)nmDiscount.Value;
+            double totalPrice = Convert.ToDouble(txbTotalPrice.Text.Split(',')[0].Replace(".", ""));
+            double finalTotalPrice = totalPrice - (totalPrice / 100) * discount;
+            
             if(idBill != -1)
             {
-                if(MessageBox.Show("Bạn có thật sự muốn thanh toán hóa đơn của " + car.Name, "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                if(MessageBox.Show(string.Format("Bạn có muốn thanh toán hóa đơn của {0}\nTổng tiền - (Tổng tiền / 100) x Giảm giá\n=> {1} - ({1} / 100) x {2} = {3}", car.Name, totalPrice, discount, finalTotalPrice), "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
                 {
-                    BillDAO.Instance.CheckOut(idBill);
+                    BillDAO.Instance.CheckOut(idBill, discount, (float)finalTotalPrice);
                     ShowBill(car.ID);
 
                     LoadCar();
                 }
+            }
+        }
+
+        private void btnSwitchCar_Click(object sender, EventArgs e)
+        {
+            int id1 = (lsvBill.Tag as Car).ID;
+            int id2 = (cbSwitchCar.SelectedItem as Car).ID;
+
+            if (MessageBox.Show(string.Format("Bạn có muốn chuyển {0} qua {1}", (lsvBill.Tag as Car).Name, (cbSwitchCar.SelectedItem as Car).Name), "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+            {
+                CarDAO.Instance.SwitchCar(id1, id2);
+
+                LoadCar();
             }
         }
         #endregion

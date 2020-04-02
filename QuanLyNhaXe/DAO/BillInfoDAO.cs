@@ -20,6 +20,11 @@ namespace QuanLyNhaXe.DAO
 
         private BillInfoDAO() { }
 
+        public void DeleteBillInfoByTicketID(int id)
+        {
+            DataProvider.Instance.ExecuteQuery("delete BillInfo where idTicket = " + id);
+        }
+
         public List<BillInfo> GetListBillInfo(int id)
         {
             List<BillInfo> listBillInfo = new List<BillInfo>();

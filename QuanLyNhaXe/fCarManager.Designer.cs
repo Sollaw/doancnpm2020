@@ -31,7 +31,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thôngTinTàiKhoảnToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.thôngTinCáNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lsvBill = new System.Windows.Forms.ListView();
@@ -41,7 +41,7 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel3 = new System.Windows.Forms.Panel();
             this.txbTotalPrice = new System.Windows.Forms.TextBox();
-            this.cbSwitchSeat = new System.Windows.Forms.ComboBox();
+            this.cbSwitchCar = new System.Windows.Forms.ComboBox();
             this.nmDiscount = new System.Windows.Forms.NumericUpDown();
             this.btnSwitchCar = new System.Windows.Forms.Button();
             this.btnDiscount = new System.Windows.Forms.Button();
@@ -81,23 +81,23 @@
             // thôngTinTàiKhoảnToolStripMenuItem
             // 
             this.thôngTinTàiKhoảnToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.thôngTinTàiKhoảnToolStripMenuItem1,
+            this.thôngTinCáNhânToolStripMenuItem,
             this.đăngXuấtToolStripMenuItem});
             this.thôngTinTàiKhoảnToolStripMenuItem.Name = "thôngTinTàiKhoảnToolStripMenuItem";
             this.thôngTinTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(122, 20);
             this.thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản";
             // 
-            // thôngTinTàiKhoảnToolStripMenuItem1
+            // thôngTinCáNhânToolStripMenuItem
             // 
-            this.thôngTinTàiKhoảnToolStripMenuItem1.Name = "thôngTinTàiKhoảnToolStripMenuItem1";
-            this.thôngTinTàiKhoảnToolStripMenuItem1.Size = new System.Drawing.Size(170, 22);
-            this.thôngTinTàiKhoảnToolStripMenuItem1.Text = "Thông tin cá nhân";
-            this.thôngTinTàiKhoảnToolStripMenuItem1.Click += new System.EventHandler(this.thôngTinTàiKhoảnToolStripMenuItem1_Click);
+            this.thôngTinCáNhânToolStripMenuItem.Name = "thôngTinCáNhânToolStripMenuItem";
+            this.thôngTinCáNhânToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.thôngTinCáNhânToolStripMenuItem.Text = "Thông tin cá nhân";
+            this.thôngTinCáNhânToolStripMenuItem.Click += new System.EventHandler(this.thôngTinCáNhânToolStripMenuItem_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
@@ -148,7 +148,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.txbTotalPrice);
-            this.panel3.Controls.Add(this.cbSwitchSeat);
+            this.panel3.Controls.Add(this.cbSwitchCar);
             this.panel3.Controls.Add(this.nmDiscount);
             this.panel3.Controls.Add(this.btnSwitchCar);
             this.panel3.Controls.Add(this.btnDiscount);
@@ -169,13 +169,13 @@
             this.txbTotalPrice.Text = "0";
             this.txbTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // cbSwitchSeat
+            // cbSwitchCar
             // 
-            this.cbSwitchSeat.FormattingEnabled = true;
-            this.cbSwitchSeat.Location = new System.Drawing.Point(3, 25);
-            this.cbSwitchSeat.Name = "cbSwitchSeat";
-            this.cbSwitchSeat.Size = new System.Drawing.Size(75, 21);
-            this.cbSwitchSeat.TabIndex = 4;
+            this.cbSwitchCar.FormattingEnabled = true;
+            this.cbSwitchCar.Location = new System.Drawing.Point(3, 25);
+            this.cbSwitchCar.Name = "cbSwitchCar";
+            this.cbSwitchCar.Size = new System.Drawing.Size(75, 21);
+            this.cbSwitchCar.TabIndex = 4;
             // 
             // nmDiscount
             // 
@@ -193,6 +193,7 @@
             this.btnSwitchCar.TabIndex = 6;
             this.btnSwitchCar.Text = "Chuyển xe";
             this.btnSwitchCar.UseVisualStyleBackColor = true;
+            this.btnSwitchCar.Click += new System.EventHandler(this.btnSwitchCar_Click);
             // 
             // btnDiscount
             // 
@@ -307,7 +308,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem adminToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thôngTinTàiKhoảnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thôngTinTàiKhoảnToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem thôngTinCáNhânToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ListView lsvBill;
@@ -322,7 +323,7 @@
         private System.Windows.Forms.Button btnCheckOut;
         private System.Windows.Forms.Button btnSwitchCar;
         private System.Windows.Forms.NumericUpDown nmDiscount;
-        private System.Windows.Forms.ComboBox cbSwitchSeat;
+        private System.Windows.Forms.ComboBox cbSwitchCar;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;

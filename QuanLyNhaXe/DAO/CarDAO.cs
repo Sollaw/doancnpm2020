@@ -23,6 +23,11 @@ namespace QuanLyNhaXe.DAO
 
         private CarDAO() { }
 
+        public void SwitchCar(int id1, int id2)
+        {
+            DataProvider.Instance.ExecuteQuery("exec USP_SwitchCar @idCar1 , @idCar2", new object[] { id1, id2 });
+        }
+
         public List<Car> LoadCarList()
         {
             List<Car> carList = new List<Car>();

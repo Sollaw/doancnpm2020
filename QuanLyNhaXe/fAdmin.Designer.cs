@@ -28,15 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tcAdmin = new System.Windows.Forms.TabControl();
-            this.tpBill = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.asd = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.dtpkToDate = new System.Windows.Forms.DateTimePicker();
-            this.dtpkFromDate = new System.Windows.Forms.DateTimePicker();
-            this.btnViewBill = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.tpAdmin = new System.Windows.Forms.TabPage();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.nmAccountType = new System.Windows.Forms.NumericUpDown();
+            this.btnResetPassWord = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txbDisplayName = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txbUserName = new System.Windows.Forms.TextBox();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.btnShowAccount = new System.Windows.Forms.Button();
+            this.btnEditAccount = new System.Windows.Forms.Button();
+            this.btnDeleteAccount = new System.Windows.Forms.Button();
+            this.btnAddAccount = new System.Windows.Forms.Button();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.dtgvAccount = new System.Windows.Forms.DataGridView();
             this.tpTicket = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txbSearchTicketName = new System.Windows.Forms.TextBox();
@@ -57,59 +66,28 @@
             this.btnAddTicket = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dtgvTicket = new System.Windows.Forms.DataGridView();
-            this.tpTicketCategory = new System.Windows.Forms.TabPage();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txbTicketCategory = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txbCategoryID = new System.Windows.Forms.TextBox();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.btnShowCategory = new System.Windows.Forms.Button();
-            this.btnEditCategory = new System.Windows.Forms.Button();
-            this.btnDeleteCategory = new System.Windows.Forms.Button();
-            this.btnAddCategory = new System.Windows.Forms.Button();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.dtgvCategory = new System.Windows.Forms.DataGridView();
-            this.tpCar = new System.Windows.Forms.TabPage();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.cbCarStatus = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txbCarName = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txbCarID = new System.Windows.Forms.TextBox();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.btnShowCar = new System.Windows.Forms.Button();
-            this.btnEditCar = new System.Windows.Forms.Button();
-            this.btnDeleteCar = new System.Windows.Forms.Button();
-            this.btnAddCar = new System.Windows.Forms.Button();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.dtgvCar = new System.Windows.Forms.DataGridView();
-            this.tpAdmin = new System.Windows.Forms.TabPage();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.btnResetPassWord = new System.Windows.Forms.Button();
-            this.cbAccountType = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txbDisplayName = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txbUserName = new System.Windows.Forms.TextBox();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.btnShowAccount = new System.Windows.Forms.Button();
-            this.btnEditAccount = new System.Windows.Forms.Button();
-            this.btnDeleteAccount = new System.Windows.Forms.Button();
-            this.btnAddAccount = new System.Windows.Forms.Button();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.dtgvAccount = new System.Windows.Forms.DataGridView();
-            this.tcAdmin.SuspendLayout();
-            this.tpBill.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.asd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel4.SuspendLayout();
+            this.tpBill = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dtgvBill = new System.Windows.Forms.DataGridView();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.dtpkToDate = new System.Windows.Forms.DateTimePicker();
+            this.dtpkFromDate = new System.Windows.Forms.DateTimePicker();
+            this.btnViewBill = new System.Windows.Forms.Button();
+            this.tcAdmin = new System.Windows.Forms.TabControl();
+            this.tpReport = new System.Windows.Forms.TabPage();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.QuanLyNhaxeDataSet = new QuanLyNhaXe.QuanLyNhaxeDataSet();
+            this.USP_GetCarListBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.USP_GetCarListTableAdapter = new QuanLyNhaXe.QuanLyNhaxeDataSetTableAdapters.USP_GetCarListTableAdapter();
+            this.QuanLyNhaxeDataSet1 = new QuanLyNhaXe.QuanLyNhaxeDataSet1();
+            this.USP_GetListBillByDateForReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.USP_GetListBillByDateForReportTableAdapter = new QuanLyNhaXe.QuanLyNhaxeDataSet1TableAdapters.USP_GetListBillByDateForReportTableAdapter();
+            this.tpAdmin.SuspendLayout();
+            this.panel16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmAccountType)).BeginInit();
+            this.panel17.SuspendLayout();
+            this.panel18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).BeginInit();
             this.tpTicket.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -117,106 +95,178 @@
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTicket)).BeginInit();
-            this.tpTicketCategory.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvCategory)).BeginInit();
-            this.tpCar.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.panel13.SuspendLayout();
-            this.panel14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvCar)).BeginInit();
-            this.tpAdmin.SuspendLayout();
-            this.panel16.SuspendLayout();
-            this.panel17.SuspendLayout();
-            this.panel18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).BeginInit();
+            this.tpBill.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvBill)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.tcAdmin.SuspendLayout();
+            this.tpReport.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QuanLyNhaxeDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.USP_GetCarListBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QuanLyNhaxeDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.USP_GetListBillByDateForReportBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // tcAdmin
+            // tpAdmin
             // 
-            this.tcAdmin.Controls.Add(this.tpBill);
-            this.tcAdmin.Controls.Add(this.tpTicket);
-            this.tcAdmin.Controls.Add(this.tpTicketCategory);
-            this.tcAdmin.Controls.Add(this.tpCar);
-            this.tcAdmin.Controls.Add(this.tpAdmin);
-            this.tcAdmin.Location = new System.Drawing.Point(13, 13);
-            this.tcAdmin.Name = "tcAdmin";
-            this.tcAdmin.SelectedIndex = 0;
-            this.tcAdmin.Size = new System.Drawing.Size(573, 323);
-            this.tcAdmin.TabIndex = 0;
+            this.tpAdmin.Controls.Add(this.panel16);
+            this.tpAdmin.Controls.Add(this.panel17);
+            this.tpAdmin.Controls.Add(this.panel18);
+            this.tpAdmin.Location = new System.Drawing.Point(4, 22);
+            this.tpAdmin.Name = "tpAdmin";
+            this.tpAdmin.Padding = new System.Windows.Forms.Padding(3);
+            this.tpAdmin.Size = new System.Drawing.Size(565, 297);
+            this.tpAdmin.TabIndex = 4;
+            this.tpAdmin.Text = "Tài khoản";
+            this.tpAdmin.UseVisualStyleBackColor = true;
             // 
-            // tpBill
+            // panel16
             // 
-            this.tpBill.Controls.Add(this.panel1);
-            this.tpBill.Controls.Add(this.panel4);
-            this.tpBill.Location = new System.Drawing.Point(4, 22);
-            this.tpBill.Name = "tpBill";
-            this.tpBill.Padding = new System.Windows.Forms.Padding(3);
-            this.tpBill.Size = new System.Drawing.Size(565, 297);
-            this.tpBill.TabIndex = 0;
-            this.tpBill.Text = "Doanh thu";
-            this.tpBill.UseVisualStyleBackColor = true;
+            this.panel16.Controls.Add(this.nmAccountType);
+            this.panel16.Controls.Add(this.btnResetPassWord);
+            this.panel16.Controls.Add(this.label14);
+            this.panel16.Controls.Add(this.label15);
+            this.panel16.Controls.Add(this.txbDisplayName);
+            this.panel16.Controls.Add(this.label16);
+            this.panel16.Controls.Add(this.txbUserName);
+            this.panel16.Location = new System.Drawing.Point(336, 60);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(223, 231);
+            this.panel16.TabIndex = 9;
             // 
-            // panel1
+            // nmAccountType
             // 
-            this.panel1.Controls.Add(this.asd);
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(6, 38);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(553, 253);
-            this.panel1.TabIndex = 5;
+            this.nmAccountType.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.nmAccountType.Location = new System.Drawing.Point(122, 96);
+            this.nmAccountType.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nmAccountType.Name = "nmAccountType";
+            this.nmAccountType.Size = new System.Drawing.Size(39, 20);
+            this.nmAccountType.TabIndex = 3;
             // 
-            // asd
+            // btnResetPassWord
             // 
-            this.asd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.asd.Location = new System.Drawing.Point(3, 3);
-            this.asd.Name = "asd";
-            this.asd.Size = new System.Drawing.Size(547, 247);
-            this.asd.TabIndex = 0;
+            this.btnResetPassWord.Location = new System.Drawing.Point(122, 131);
+            this.btnResetPassWord.Name = "btnResetPassWord";
+            this.btnResetPassWord.Size = new System.Drawing.Size(98, 42);
+            this.btnResetPassWord.TabIndex = 4;
+            this.btnResetPassWord.Text = "Đặt lại mật khẩu";
+            this.btnResetPassWord.UseVisualStyleBackColor = true;
+            this.btnResetPassWord.Click += new System.EventHandler(this.btnResetPassWord_Click);
             // 
-            // dataGridView1
+            // label14
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(547, 225);
-            this.dataGridView1.TabIndex = 0;
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(0, 96);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(116, 19);
+            this.label14.TabIndex = 10;
+            this.label14.Text = "Loại tài khoản";
             // 
-            // panel4
+            // label15
             // 
-            this.panel4.Controls.Add(this.dtpkToDate);
-            this.panel4.Controls.Add(this.dtpkFromDate);
-            this.panel4.Controls.Add(this.btnViewBill);
-            this.panel4.Location = new System.Drawing.Point(6, 6);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(553, 26);
-            this.panel4.TabIndex = 4;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(0, 49);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(98, 19);
+            this.label15.TabIndex = 9;
+            this.label15.Text = "Tên hiển thị";
             // 
-            // dtpkToDate
+            // txbDisplayName
             // 
-            this.dtpkToDate.Location = new System.Drawing.Point(350, 3);
-            this.dtpkToDate.Name = "dtpkToDate";
-            this.dtpkToDate.Size = new System.Drawing.Size(200, 20);
-            this.dtpkToDate.TabIndex = 4;
+            this.txbDisplayName.Location = new System.Drawing.Point(4, 71);
+            this.txbDisplayName.Name = "txbDisplayName";
+            this.txbDisplayName.Size = new System.Drawing.Size(216, 20);
+            this.txbDisplayName.TabIndex = 2;
             // 
-            // dtpkFromDate
+            // label16
             // 
-            this.dtpkFromDate.Location = new System.Drawing.Point(3, 3);
-            this.dtpkFromDate.Name = "dtpkFromDate";
-            this.dtpkFromDate.Size = new System.Drawing.Size(200, 20);
-            this.dtpkFromDate.TabIndex = 3;
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(0, 4);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(112, 19);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Tên tài khoản";
             // 
-            // btnViewBill
+            // txbUserName
             // 
-            this.btnViewBill.Location = new System.Drawing.Point(238, 3);
-            this.btnViewBill.Name = "btnViewBill";
-            this.btnViewBill.Size = new System.Drawing.Size(75, 20);
-            this.btnViewBill.TabIndex = 2;
-            this.btnViewBill.Text = "Thống kê";
-            this.btnViewBill.UseVisualStyleBackColor = true;
+            this.txbUserName.Location = new System.Drawing.Point(4, 26);
+            this.txbUserName.Name = "txbUserName";
+            this.txbUserName.Size = new System.Drawing.Size(216, 20);
+            this.txbUserName.TabIndex = 1;
+            // 
+            // panel17
+            // 
+            this.panel17.Controls.Add(this.btnShowAccount);
+            this.panel17.Controls.Add(this.btnEditAccount);
+            this.panel17.Controls.Add(this.btnDeleteAccount);
+            this.panel17.Controls.Add(this.btnAddAccount);
+            this.panel17.Location = new System.Drawing.Point(6, 6);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(324, 48);
+            this.panel17.TabIndex = 8;
+            // 
+            // btnShowAccount
+            // 
+            this.btnShowAccount.Location = new System.Drawing.Point(246, 3);
+            this.btnShowAccount.Name = "btnShowAccount";
+            this.btnShowAccount.Size = new System.Drawing.Size(75, 42);
+            this.btnShowAccount.TabIndex = 5;
+            this.btnShowAccount.Text = "Xem";
+            this.btnShowAccount.UseVisualStyleBackColor = true;
+            this.btnShowAccount.Click += new System.EventHandler(this.btnShowAccount_Click);
+            // 
+            // btnEditAccount
+            // 
+            this.btnEditAccount.Location = new System.Drawing.Point(165, 3);
+            this.btnEditAccount.Name = "btnEditAccount";
+            this.btnEditAccount.Size = new System.Drawing.Size(75, 42);
+            this.btnEditAccount.TabIndex = 4;
+            this.btnEditAccount.Text = "Sửa";
+            this.btnEditAccount.UseVisualStyleBackColor = true;
+            this.btnEditAccount.Click += new System.EventHandler(this.btnEditAccount_Click);
+            // 
+            // btnDeleteAccount
+            // 
+            this.btnDeleteAccount.Location = new System.Drawing.Point(84, 3);
+            this.btnDeleteAccount.Name = "btnDeleteAccount";
+            this.btnDeleteAccount.Size = new System.Drawing.Size(75, 42);
+            this.btnDeleteAccount.TabIndex = 3;
+            this.btnDeleteAccount.Text = "Xóa";
+            this.btnDeleteAccount.UseVisualStyleBackColor = true;
+            this.btnDeleteAccount.Click += new System.EventHandler(this.btnDeleteAccount_Click);
+            // 
+            // btnAddAccount
+            // 
+            this.btnAddAccount.Location = new System.Drawing.Point(3, 3);
+            this.btnAddAccount.Name = "btnAddAccount";
+            this.btnAddAccount.Size = new System.Drawing.Size(75, 42);
+            this.btnAddAccount.TabIndex = 2;
+            this.btnAddAccount.Text = "Thêm";
+            this.btnAddAccount.UseVisualStyleBackColor = true;
+            this.btnAddAccount.Click += new System.EventHandler(this.btnAddAccount_Click);
+            // 
+            // panel18
+            // 
+            this.panel18.Controls.Add(this.dtgvAccount);
+            this.panel18.Location = new System.Drawing.Point(6, 60);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(324, 231);
+            this.panel18.TabIndex = 7;
+            // 
+            // dtgvAccount
+            // 
+            this.dtgvAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvAccount.Location = new System.Drawing.Point(4, 4);
+            this.dtgvAccount.Name = "dtgvAccount";
+            this.dtgvAccount.Size = new System.Drawing.Size(317, 224);
+            this.dtgvAccount.TabIndex = 0;
             // 
             // tpTicket
             // 
@@ -256,6 +306,7 @@
             this.btnSearchTicket.TabIndex = 6;
             this.btnSearchTicket.Text = "Tìm";
             this.btnSearchTicket.UseVisualStyleBackColor = true;
+            this.btnSearchTicket.Click += new System.EventHandler(this.btnSearchTicket_Click);
             // 
             // panel5
             // 
@@ -346,6 +397,7 @@
             this.txbTicketID.ReadOnly = true;
             this.txbTicketID.Size = new System.Drawing.Size(216, 20);
             this.txbTicketID.TabIndex = 1;
+            this.txbTicketID.TextChanged += new System.EventHandler(this.txbTicketID_TextChanged);
             // 
             // panel3
             // 
@@ -366,6 +418,7 @@
             this.btnShowTicket.TabIndex = 5;
             this.btnShowTicket.Text = "Xem";
             this.btnShowTicket.UseVisualStyleBackColor = true;
+            this.btnShowTicket.Click += new System.EventHandler(this.btnShowTicket_Click);
             // 
             // btnEditTicket
             // 
@@ -375,6 +428,7 @@
             this.btnEditTicket.TabIndex = 4;
             this.btnEditTicket.Text = "Sửa";
             this.btnEditTicket.UseVisualStyleBackColor = true;
+            this.btnEditTicket.Click += new System.EventHandler(this.btnEditTicket_Click);
             // 
             // btnDeleteTicket
             // 
@@ -384,6 +438,7 @@
             this.btnDeleteTicket.TabIndex = 3;
             this.btnDeleteTicket.Text = "Xóa";
             this.btnDeleteTicket.UseVisualStyleBackColor = true;
+            this.btnDeleteTicket.Click += new System.EventHandler(this.btnDeleteTicket_Click);
             // 
             // btnAddTicket
             // 
@@ -393,6 +448,7 @@
             this.btnAddTicket.TabIndex = 2;
             this.btnAddTicket.Text = "Thêm";
             this.btnAddTicket.UseVisualStyleBackColor = true;
+            this.btnAddTicket.Click += new System.EventHandler(this.btnAddTicket_Click);
             // 
             // panel2
             // 
@@ -410,447 +466,134 @@
             this.dtgvTicket.Size = new System.Drawing.Size(317, 224);
             this.dtgvTicket.TabIndex = 0;
             // 
-            // tpTicketCategory
-            // 
-            this.tpTicketCategory.Controls.Add(this.panel8);
-            this.tpTicketCategory.Controls.Add(this.panel9);
-            this.tpTicketCategory.Controls.Add(this.panel10);
-            this.tpTicketCategory.Location = new System.Drawing.Point(4, 22);
-            this.tpTicketCategory.Name = "tpTicketCategory";
-            this.tpTicketCategory.Padding = new System.Windows.Forms.Padding(3);
-            this.tpTicketCategory.Size = new System.Drawing.Size(565, 297);
-            this.tpTicketCategory.TabIndex = 2;
-            this.tpTicketCategory.Text = "Danh mục";
-            this.tpTicketCategory.UseVisualStyleBackColor = true;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.label7);
-            this.panel8.Controls.Add(this.txbTicketCategory);
-            this.panel8.Controls.Add(this.label8);
-            this.panel8.Controls.Add(this.txbCategoryID);
-            this.panel8.Location = new System.Drawing.Point(336, 60);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(223, 231);
-            this.panel8.TabIndex = 9;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(0, 49);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(118, 19);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Tên danh mục";
-            // 
-            // txbTicketCategory
-            // 
-            this.txbTicketCategory.Location = new System.Drawing.Point(4, 71);
-            this.txbTicketCategory.Name = "txbTicketCategory";
-            this.txbTicketCategory.Size = new System.Drawing.Size(216, 20);
-            this.txbTicketCategory.TabIndex = 8;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(0, 4);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(25, 19);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "ID";
-            // 
-            // txbCategoryID
-            // 
-            this.txbCategoryID.Location = new System.Drawing.Point(4, 26);
-            this.txbCategoryID.Name = "txbCategoryID";
-            this.txbCategoryID.ReadOnly = true;
-            this.txbCategoryID.Size = new System.Drawing.Size(216, 20);
-            this.txbCategoryID.TabIndex = 1;
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.btnShowCategory);
-            this.panel9.Controls.Add(this.btnEditCategory);
-            this.panel9.Controls.Add(this.btnDeleteCategory);
-            this.panel9.Controls.Add(this.btnAddCategory);
-            this.panel9.Location = new System.Drawing.Point(6, 6);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(324, 48);
-            this.panel9.TabIndex = 8;
-            // 
-            // btnShowCategory
-            // 
-            this.btnShowCategory.Location = new System.Drawing.Point(246, 3);
-            this.btnShowCategory.Name = "btnShowCategory";
-            this.btnShowCategory.Size = new System.Drawing.Size(75, 42);
-            this.btnShowCategory.TabIndex = 5;
-            this.btnShowCategory.Text = "Xem";
-            this.btnShowCategory.UseVisualStyleBackColor = true;
-            // 
-            // btnEditCategory
-            // 
-            this.btnEditCategory.Location = new System.Drawing.Point(165, 3);
-            this.btnEditCategory.Name = "btnEditCategory";
-            this.btnEditCategory.Size = new System.Drawing.Size(75, 42);
-            this.btnEditCategory.TabIndex = 4;
-            this.btnEditCategory.Text = "Sửa";
-            this.btnEditCategory.UseVisualStyleBackColor = true;
-            // 
-            // btnDeleteCategory
-            // 
-            this.btnDeleteCategory.Location = new System.Drawing.Point(84, 3);
-            this.btnDeleteCategory.Name = "btnDeleteCategory";
-            this.btnDeleteCategory.Size = new System.Drawing.Size(75, 42);
-            this.btnDeleteCategory.TabIndex = 3;
-            this.btnDeleteCategory.Text = "Xóa";
-            this.btnDeleteCategory.UseVisualStyleBackColor = true;
-            // 
-            // btnAddCategory
-            // 
-            this.btnAddCategory.Location = new System.Drawing.Point(3, 3);
-            this.btnAddCategory.Name = "btnAddCategory";
-            this.btnAddCategory.Size = new System.Drawing.Size(75, 42);
-            this.btnAddCategory.TabIndex = 2;
-            this.btnAddCategory.Text = "Thêm";
-            this.btnAddCategory.UseVisualStyleBackColor = true;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.dtgvCategory);
-            this.panel10.Location = new System.Drawing.Point(6, 60);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(324, 231);
-            this.panel10.TabIndex = 7;
-            // 
-            // dtgvCategory
-            // 
-            this.dtgvCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvCategory.Location = new System.Drawing.Point(4, 4);
-            this.dtgvCategory.Name = "dtgvCategory";
-            this.dtgvCategory.Size = new System.Drawing.Size(317, 224);
-            this.dtgvCategory.TabIndex = 0;
-            // 
-            // tpCar
-            // 
-            this.tpCar.Controls.Add(this.panel11);
-            this.tpCar.Controls.Add(this.panel12);
-            this.tpCar.Controls.Add(this.panel13);
-            this.tpCar.Controls.Add(this.panel14);
-            this.tpCar.Location = new System.Drawing.Point(4, 22);
-            this.tpCar.Name = "tpCar";
-            this.tpCar.Padding = new System.Windows.Forms.Padding(3);
-            this.tpCar.Size = new System.Drawing.Size(565, 297);
-            this.tpCar.TabIndex = 3;
-            this.tpCar.Text = "Xe";
-            this.tpCar.UseVisualStyleBackColor = true;
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.textBox4);
-            this.panel11.Controls.Add(this.button6);
-            this.panel11.Location = new System.Drawing.Point(336, 6);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(223, 48);
-            this.panel11.TabIndex = 10;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(4, 15);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(135, 20);
-            this.textBox4.TabIndex = 7;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(145, 3);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 42);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Tìm";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.cbCarStatus);
-            this.panel12.Controls.Add(this.label10);
-            this.panel12.Controls.Add(this.label11);
-            this.panel12.Controls.Add(this.txbCarName);
-            this.panel12.Controls.Add(this.label12);
-            this.panel12.Controls.Add(this.txbCarID);
-            this.panel12.Location = new System.Drawing.Point(336, 60);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(223, 231);
-            this.panel12.TabIndex = 9;
-            // 
-            // cbCarStatus
-            // 
-            this.cbCarStatus.FormattingEnabled = true;
-            this.cbCarStatus.Location = new System.Drawing.Point(4, 117);
-            this.cbCarStatus.Name = "cbCarStatus";
-            this.cbCarStatus.Size = new System.Drawing.Size(216, 21);
-            this.cbCarStatus.TabIndex = 11;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(0, 94);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(85, 19);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Trạng thái";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(0, 49);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 19);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "Tên xe";
-            // 
-            // txbCarName
-            // 
-            this.txbCarName.Location = new System.Drawing.Point(4, 71);
-            this.txbCarName.Name = "txbCarName";
-            this.txbCarName.Size = new System.Drawing.Size(216, 20);
-            this.txbCarName.TabIndex = 8;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(0, 4);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(25, 19);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "ID";
-            // 
-            // txbCarID
-            // 
-            this.txbCarID.Location = new System.Drawing.Point(4, 26);
-            this.txbCarID.Name = "txbCarID";
-            this.txbCarID.ReadOnly = true;
-            this.txbCarID.Size = new System.Drawing.Size(216, 20);
-            this.txbCarID.TabIndex = 1;
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.btnShowCar);
-            this.panel13.Controls.Add(this.btnEditCar);
-            this.panel13.Controls.Add(this.btnDeleteCar);
-            this.panel13.Controls.Add(this.btnAddCar);
-            this.panel13.Location = new System.Drawing.Point(6, 6);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(324, 48);
-            this.panel13.TabIndex = 8;
-            // 
-            // btnShowCar
-            // 
-            this.btnShowCar.Location = new System.Drawing.Point(246, 3);
-            this.btnShowCar.Name = "btnShowCar";
-            this.btnShowCar.Size = new System.Drawing.Size(75, 42);
-            this.btnShowCar.TabIndex = 5;
-            this.btnShowCar.Text = "Xem";
-            this.btnShowCar.UseVisualStyleBackColor = true;
-            // 
-            // btnEditCar
-            // 
-            this.btnEditCar.Location = new System.Drawing.Point(165, 3);
-            this.btnEditCar.Name = "btnEditCar";
-            this.btnEditCar.Size = new System.Drawing.Size(75, 42);
-            this.btnEditCar.TabIndex = 4;
-            this.btnEditCar.Text = "Sửa";
-            this.btnEditCar.UseVisualStyleBackColor = true;
-            // 
-            // btnDeleteCar
-            // 
-            this.btnDeleteCar.Location = new System.Drawing.Point(84, 3);
-            this.btnDeleteCar.Name = "btnDeleteCar";
-            this.btnDeleteCar.Size = new System.Drawing.Size(75, 42);
-            this.btnDeleteCar.TabIndex = 3;
-            this.btnDeleteCar.Text = "Xóa";
-            this.btnDeleteCar.UseVisualStyleBackColor = true;
-            // 
-            // btnAddCar
-            // 
-            this.btnAddCar.Location = new System.Drawing.Point(3, 3);
-            this.btnAddCar.Name = "btnAddCar";
-            this.btnAddCar.Size = new System.Drawing.Size(75, 42);
-            this.btnAddCar.TabIndex = 2;
-            this.btnAddCar.Text = "Thêm";
-            this.btnAddCar.UseVisualStyleBackColor = true;
-            // 
-            // panel14
-            // 
-            this.panel14.Controls.Add(this.dtgvCar);
-            this.panel14.Location = new System.Drawing.Point(6, 60);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(324, 231);
-            this.panel14.TabIndex = 7;
-            // 
-            // dtgvCar
-            // 
-            this.dtgvCar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvCar.Location = new System.Drawing.Point(4, 4);
-            this.dtgvCar.Name = "dtgvCar";
-            this.dtgvCar.Size = new System.Drawing.Size(317, 224);
-            this.dtgvCar.TabIndex = 0;
-            // 
-            // tpAdmin
-            // 
-            this.tpAdmin.Controls.Add(this.panel16);
-            this.tpAdmin.Controls.Add(this.panel17);
-            this.tpAdmin.Controls.Add(this.panel18);
-            this.tpAdmin.Location = new System.Drawing.Point(4, 22);
-            this.tpAdmin.Name = "tpAdmin";
-            this.tpAdmin.Padding = new System.Windows.Forms.Padding(3);
-            this.tpAdmin.Size = new System.Drawing.Size(565, 297);
-            this.tpAdmin.TabIndex = 4;
-            this.tpAdmin.Text = "Tài khoản";
-            this.tpAdmin.UseVisualStyleBackColor = true;
-            // 
-            // panel16
-            // 
-            this.panel16.Controls.Add(this.btnResetPassWord);
-            this.panel16.Controls.Add(this.cbAccountType);
-            this.panel16.Controls.Add(this.label14);
-            this.panel16.Controls.Add(this.label15);
-            this.panel16.Controls.Add(this.txbDisplayName);
-            this.panel16.Controls.Add(this.label16);
-            this.panel16.Controls.Add(this.txbUserName);
-            this.panel16.Location = new System.Drawing.Point(336, 60);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(223, 231);
-            this.panel16.TabIndex = 9;
-            // 
-            // btnResetPassWord
-            // 
-            this.btnResetPassWord.Location = new System.Drawing.Point(122, 144);
-            this.btnResetPassWord.Name = "btnResetPassWord";
-            this.btnResetPassWord.Size = new System.Drawing.Size(98, 42);
-            this.btnResetPassWord.TabIndex = 6;
-            this.btnResetPassWord.Text = "Đặt lại mật khẩu";
-            this.btnResetPassWord.UseVisualStyleBackColor = true;
-            // 
-            // cbAccountType
-            // 
-            this.cbAccountType.FormattingEnabled = true;
-            this.cbAccountType.Location = new System.Drawing.Point(4, 117);
-            this.cbAccountType.Name = "cbAccountType";
-            this.cbAccountType.Size = new System.Drawing.Size(216, 21);
-            this.cbAccountType.TabIndex = 11;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(0, 94);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(116, 19);
-            this.label14.TabIndex = 10;
-            this.label14.Text = "Loại tài khoản";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(0, 49);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(98, 19);
-            this.label15.TabIndex = 9;
-            this.label15.Text = "Tên hiển thị";
-            // 
-            // txbDisplayName
-            // 
-            this.txbDisplayName.Location = new System.Drawing.Point(4, 71);
-            this.txbDisplayName.Name = "txbDisplayName";
-            this.txbDisplayName.Size = new System.Drawing.Size(216, 20);
-            this.txbDisplayName.TabIndex = 8;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(0, 4);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(112, 19);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "Tên tài khoản";
-            // 
-            // txbUserName
-            // 
-            this.txbUserName.Location = new System.Drawing.Point(4, 26);
-            this.txbUserName.Name = "txbUserName";
-            this.txbUserName.ReadOnly = true;
-            this.txbUserName.Size = new System.Drawing.Size(216, 20);
-            this.txbUserName.TabIndex = 1;
-            // 
-            // panel17
-            // 
-            this.panel17.Controls.Add(this.btnShowAccount);
-            this.panel17.Controls.Add(this.btnEditAccount);
-            this.panel17.Controls.Add(this.btnDeleteAccount);
-            this.panel17.Controls.Add(this.btnAddAccount);
-            this.panel17.Location = new System.Drawing.Point(6, 6);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(324, 48);
-            this.panel17.TabIndex = 8;
-            // 
-            // btnShowAccount
-            // 
-            this.btnShowAccount.Location = new System.Drawing.Point(246, 3);
-            this.btnShowAccount.Name = "btnShowAccount";
-            this.btnShowAccount.Size = new System.Drawing.Size(75, 42);
-            this.btnShowAccount.TabIndex = 5;
-            this.btnShowAccount.Text = "Xem";
-            this.btnShowAccount.UseVisualStyleBackColor = true;
-            // 
-            // btnEditAccount
-            // 
-            this.btnEditAccount.Location = new System.Drawing.Point(165, 3);
-            this.btnEditAccount.Name = "btnEditAccount";
-            this.btnEditAccount.Size = new System.Drawing.Size(75, 42);
-            this.btnEditAccount.TabIndex = 4;
-            this.btnEditAccount.Text = "Sửa";
-            this.btnEditAccount.UseVisualStyleBackColor = true;
-            // 
-            // btnDeleteAccount
-            // 
-            this.btnDeleteAccount.Location = new System.Drawing.Point(84, 3);
-            this.btnDeleteAccount.Name = "btnDeleteAccount";
-            this.btnDeleteAccount.Size = new System.Drawing.Size(75, 42);
-            this.btnDeleteAccount.TabIndex = 3;
-            this.btnDeleteAccount.Text = "Xóa";
-            this.btnDeleteAccount.UseVisualStyleBackColor = true;
-            // 
-            // btnAddAccount
-            // 
-            this.btnAddAccount.Location = new System.Drawing.Point(3, 3);
-            this.btnAddAccount.Name = "btnAddAccount";
-            this.btnAddAccount.Size = new System.Drawing.Size(75, 42);
-            this.btnAddAccount.TabIndex = 2;
-            this.btnAddAccount.Text = "Thêm";
-            this.btnAddAccount.UseVisualStyleBackColor = true;
-            // 
-            // panel18
-            // 
-            this.panel18.Controls.Add(this.dtgvAccount);
-            this.panel18.Location = new System.Drawing.Point(6, 60);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(324, 231);
-            this.panel18.TabIndex = 7;
-            // 
-            // dtgvAccount
-            // 
-            this.dtgvAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvAccount.Location = new System.Drawing.Point(4, 4);
-            this.dtgvAccount.Name = "dtgvAccount";
-            this.dtgvAccount.Size = new System.Drawing.Size(317, 224);
-            this.dtgvAccount.TabIndex = 0;
+            // tpBill
+            // 
+            this.tpBill.Controls.Add(this.panel1);
+            this.tpBill.Controls.Add(this.panel4);
+            this.tpBill.Location = new System.Drawing.Point(4, 22);
+            this.tpBill.Name = "tpBill";
+            this.tpBill.Padding = new System.Windows.Forms.Padding(3);
+            this.tpBill.Size = new System.Drawing.Size(565, 297);
+            this.tpBill.TabIndex = 0;
+            this.tpBill.Text = "Doanh thu";
+            this.tpBill.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dtgvBill);
+            this.panel1.Location = new System.Drawing.Point(6, 38);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(553, 253);
+            this.panel1.TabIndex = 5;
+            // 
+            // dtgvBill
+            // 
+            this.dtgvBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgvBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvBill.Location = new System.Drawing.Point(3, 3);
+            this.dtgvBill.Name = "dtgvBill";
+            this.dtgvBill.Size = new System.Drawing.Size(547, 247);
+            this.dtgvBill.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.dtpkToDate);
+            this.panel4.Controls.Add(this.dtpkFromDate);
+            this.panel4.Controls.Add(this.btnViewBill);
+            this.panel4.Location = new System.Drawing.Point(6, 6);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(553, 26);
+            this.panel4.TabIndex = 4;
+            // 
+            // dtpkToDate
+            // 
+            this.dtpkToDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpkToDate.Location = new System.Drawing.Point(350, 3);
+            this.dtpkToDate.Name = "dtpkToDate";
+            this.dtpkToDate.Size = new System.Drawing.Size(200, 20);
+            this.dtpkToDate.TabIndex = 4;
+            // 
+            // dtpkFromDate
+            // 
+            this.dtpkFromDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpkFromDate.Location = new System.Drawing.Point(3, 3);
+            this.dtpkFromDate.Name = "dtpkFromDate";
+            this.dtpkFromDate.Size = new System.Drawing.Size(200, 20);
+            this.dtpkFromDate.TabIndex = 3;
+            // 
+            // btnViewBill
+            // 
+            this.btnViewBill.Location = new System.Drawing.Point(238, 3);
+            this.btnViewBill.Name = "btnViewBill";
+            this.btnViewBill.Size = new System.Drawing.Size(75, 20);
+            this.btnViewBill.TabIndex = 2;
+            this.btnViewBill.Text = "Thống kê";
+            this.btnViewBill.UseVisualStyleBackColor = true;
+            this.btnViewBill.Click += new System.EventHandler(this.btnViewBill_Click);
+            // 
+            // tcAdmin
+            // 
+            this.tcAdmin.Controls.Add(this.tpBill);
+            this.tcAdmin.Controls.Add(this.tpTicket);
+            this.tcAdmin.Controls.Add(this.tpAdmin);
+            this.tcAdmin.Controls.Add(this.tpReport);
+            this.tcAdmin.Location = new System.Drawing.Point(13, 13);
+            this.tcAdmin.Name = "tcAdmin";
+            this.tcAdmin.SelectedIndex = 0;
+            this.tcAdmin.Size = new System.Drawing.Size(573, 323);
+            this.tcAdmin.TabIndex = 0;
+            // 
+            // tpReport
+            // 
+            this.tpReport.Controls.Add(this.reportViewer1);
+            this.tpReport.Location = new System.Drawing.Point(4, 22);
+            this.tpReport.Name = "tpReport";
+            this.tpReport.Padding = new System.Windows.Forms.Padding(3);
+            this.tpReport.Size = new System.Drawing.Size(565, 297);
+            this.tpReport.TabIndex = 5;
+            this.tpReport.Text = "Report";
+            this.tpReport.UseVisualStyleBackColor = true;
+            // 
+            // reportViewer1
+            // 
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.USP_GetListBillByDateForReportBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "QuanLyNhaXe.Report2.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(3, 3);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(559, 291);
+            this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.FullPage;
+            // 
+            // QuanLyNhaxeDataSet
+            // 
+            this.QuanLyNhaxeDataSet.DataSetName = "QuanLyNhaxeDataSet";
+            this.QuanLyNhaxeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // USP_GetCarListBindingSource
+            // 
+            this.USP_GetCarListBindingSource.DataMember = "USP_GetCarList";
+            this.USP_GetCarListBindingSource.DataSource = this.QuanLyNhaxeDataSet;
+            // 
+            // USP_GetCarListTableAdapter
+            // 
+            this.USP_GetCarListTableAdapter.ClearBeforeFill = true;
+            // 
+            // QuanLyNhaxeDataSet1
+            // 
+            this.QuanLyNhaxeDataSet1.DataSetName = "QuanLyNhaxeDataSet1";
+            this.QuanLyNhaxeDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // USP_GetListBillByDateForReportBindingSource
+            // 
+            this.USP_GetListBillByDateForReportBindingSource.DataMember = "USP_GetListBillByDateForReport";
+            this.USP_GetListBillByDateForReportBindingSource.DataSource = this.QuanLyNhaxeDataSet1;
+            // 
+            // USP_GetListBillByDateForReportTableAdapter
+            // 
+            this.USP_GetListBillByDateForReportTableAdapter.ClearBeforeFill = true;
             // 
             // fAdmin
             // 
@@ -861,12 +604,14 @@
             this.Name = "fAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
-            this.tcAdmin.ResumeLayout(false);
-            this.tpBill.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.asd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel4.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.fAdmin_Load);
+            this.tpAdmin.ResumeLayout(false);
+            this.panel16.ResumeLayout(false);
+            this.panel16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmAccountType)).EndInit();
+            this.panel17.ResumeLayout(false);
+            this.panel18.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).EndInit();
             this.tpTicket.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
@@ -876,95 +621,25 @@
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTicket)).EndInit();
-            this.tpTicketCategory.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvCategory)).EndInit();
-            this.tpCar.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
-            this.panel13.ResumeLayout(false);
-            this.panel14.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvCar)).EndInit();
-            this.tpAdmin.ResumeLayout(false);
-            this.panel16.ResumeLayout(false);
-            this.panel16.PerformLayout();
-            this.panel17.ResumeLayout(false);
-            this.panel18.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).EndInit();
+            this.tpBill.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvBill)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.tcAdmin.ResumeLayout(false);
+            this.tpReport.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.QuanLyNhaxeDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.USP_GetCarListBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QuanLyNhaxeDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.USP_GetListBillByDateForReportBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TabControl tcAdmin;
-        private System.Windows.Forms.TabPage tpBill;
-        private System.Windows.Forms.TabPage tpTicket;
-        private System.Windows.Forms.TabPage tpTicketCategory;
-        private System.Windows.Forms.TabPage tpCar;
         private System.Windows.Forms.TabPage tpAdmin;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button btnViewBill;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DateTimePicker dtpkToDate;
-        private System.Windows.Forms.DateTimePicker dtpkFromDate;
-        private System.Windows.Forms.DataGridView asd;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnAddTicket;
-        private System.Windows.Forms.Button btnShowTicket;
-        private System.Windows.Forms.Button btnEditTicket;
-        private System.Windows.Forms.Button btnDeleteTicket;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.DataGridView dtgvTicket;
-        private System.Windows.Forms.Button btnSearchTicket;
-        private System.Windows.Forms.TextBox txbSearchTicketName;
-        private System.Windows.Forms.TextBox txbTicketID;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txbTicketName;
-        private System.Windows.Forms.ComboBox cbTicketCategory;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown nmTicketPrice;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txbTicketCategory;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txbCategoryID;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Button btnShowCategory;
-        private System.Windows.Forms.Button btnEditCategory;
-        private System.Windows.Forms.Button btnDeleteCategory;
-        private System.Windows.Forms.Button btnAddCategory;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.DataGridView dtgvCategory;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.ComboBox cbCarStatus;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txbCarName;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txbCarID;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Button btnShowCar;
-        private System.Windows.Forms.Button btnEditCar;
-        private System.Windows.Forms.Button btnDeleteCar;
-        private System.Windows.Forms.Button btnAddCar;
-        private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.DataGridView dtgvCar;
         private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.ComboBox cbAccountType;
+        private System.Windows.Forms.NumericUpDown nmAccountType;
+        private System.Windows.Forms.Button btnResetPassWord;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txbDisplayName;
@@ -977,6 +652,41 @@
         private System.Windows.Forms.Button btnAddAccount;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.DataGridView dtgvAccount;
-        private System.Windows.Forms.Button btnResetPassWord;
+        private System.Windows.Forms.TabPage tpTicket;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.TextBox txbSearchTicketName;
+        private System.Windows.Forms.Button btnSearchTicket;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.NumericUpDown nmTicketPrice;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cbTicketCategory;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txbTicketName;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txbTicketID;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnShowTicket;
+        private System.Windows.Forms.Button btnEditTicket;
+        private System.Windows.Forms.Button btnDeleteTicket;
+        private System.Windows.Forms.Button btnAddTicket;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridView dtgvTicket;
+        private System.Windows.Forms.TabPage tpBill;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dtgvBill;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.DateTimePicker dtpkToDate;
+        private System.Windows.Forms.DateTimePicker dtpkFromDate;
+        private System.Windows.Forms.Button btnViewBill;
+        private System.Windows.Forms.TabControl tcAdmin;
+        private System.Windows.Forms.TabPage tpReport;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource USP_GetCarListBindingSource;
+        private QuanLyNhaxeDataSet QuanLyNhaxeDataSet;
+        private QuanLyNhaxeDataSetTableAdapters.USP_GetCarListTableAdapter USP_GetCarListTableAdapter;
+        private System.Windows.Forms.BindingSource USP_GetListBillByDateForReportBindingSource;
+        private QuanLyNhaxeDataSet1 QuanLyNhaxeDataSet1;
+        private QuanLyNhaxeDataSet1TableAdapters.USP_GetListBillByDateForReportTableAdapter USP_GetListBillByDateForReportTableAdapter;
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
-            this.tbxPassWord = new System.Windows.Forms.TextBox();
+            this.txbUserName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txbDisplayName = new System.Windows.Forms.TextBox();
@@ -54,20 +54,20 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.tbxPassWord);
+            this.panel3.Controls.Add(this.txbUserName);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(12, 12);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(321, 44);
             this.panel3.TabIndex = 5;
             // 
-            // tbxPassWord
+            // txbUserName
             // 
-            this.tbxPassWord.Location = new System.Drawing.Point(7, 21);
-            this.tbxPassWord.Name = "tbxPassWord";
-            this.tbxPassWord.ReadOnly = true;
-            this.tbxPassWord.Size = new System.Drawing.Size(311, 20);
-            this.tbxPassWord.TabIndex = 2;
+            this.txbUserName.Location = new System.Drawing.Point(7, 21);
+            this.txbUserName.Name = "txbUserName";
+            this.txbUserName.ReadOnly = true;
+            this.txbUserName.Size = new System.Drawing.Size(311, 20);
+            this.txbUserName.TabIndex = 2;
             // 
             // label2
             // 
@@ -194,6 +194,7 @@
             this.btnUpdate.TabIndex = 10;
             this.btnUpdate.Text = "Cập nhật";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnExit
             // 
@@ -240,7 +241,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox tbxPassWord;
+        private System.Windows.Forms.TextBox txbUserName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txbDisplayName;

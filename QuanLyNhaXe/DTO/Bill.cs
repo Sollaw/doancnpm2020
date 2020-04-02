@@ -9,12 +9,13 @@ namespace QuanLyNhaXe.DTO
 {
     public class Bill
     {
-        public Bill(int id, DateTime? dateCheckIn, DateTime? dateCheckOut, int status)
+        public Bill(int id, DateTime? dateCheckIn, DateTime? dateCheckOut, int status, int discount = 0)
         {
             this.ID = id;
             this.DateCheckIn = dateCheckIn;
             this.DateCheckOut = dateCheckOut;
             this.Status = status;
+            this.Discount = discount;
         }
 
         public Bill(DataRow row)
@@ -28,8 +29,19 @@ namespace QuanLyNhaXe.DTO
                 this.DateCheckOut = (DateTime?)dateCheckOutTemp;
             }
 
-
             this.Status = (int)row["status"];
+
+            if (row["discount"].ToString() != "")
+            {
+                this.Discount = (int)row["discount"];
+            }
+        }
+
+        private int discount;
+        public int Discount
+        {
+            get { return discount; }
+            set { discount = value; }
         }
 
         private int status;
